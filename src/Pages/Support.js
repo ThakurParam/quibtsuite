@@ -1,16 +1,17 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import sign1 from "../Assests/support/sign1.png";
-
+import star1 from "../Assests/support/star1.png";
+import star2 from "../Assests/support/star2.png";
 export const Support = () => {
   return (
     <>
-      <Box sx={{ bgcolor: "#F9F8FE", pt: 7, pb: 5 }}>
+      <Box sx={{ bgcolor: "#F9F8FE", pt: 7, pb: 8 }}>
         <Container maxwidth="xl">
           <Box>
-            <Grid container spacing={10}>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6} lg={6} data-aos="zoom-in">
+                <Box sx={{ width: "100%" }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
@@ -21,7 +22,7 @@ export const Support = () => {
                     How we support our partner all over the world
                   </Typography>
                 </Box>
-                <Box>
+                <Box sx={{ mt: 10, width: "100%" }}>
                   <Typography
                     sx={{
                       fontWeight: 500,
@@ -36,22 +37,31 @@ export const Support = () => {
                     software
                   </Typography>
                 </Box>
-                <Box></Box>
+                <Box sx={{ gap: 10, display: "flex", mt: 9 }}>
+                  <Box>
+                    <img src={star1}></img>
+                  </Box>
+                  <Box>
+                    <img src={star2}></img>
+                  </Box>
+                </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} data-aos="zoom-in-up">
                 <Box>
                   <Box sx={{ display: "flex" }}>
-                    <Box
+                    <Card
+                      elevation={4}
                       sx={{
-                        height: "60px",
-                        width: "60px",
+                        p: 2,
+                        height: "30px",
+                        width: "40px",
                         bgcolor: "white",
                         textAlign: "center",
                       }}
                     >
                       <img style={{ textAlign: "center" }} src={sign1}></img>
-                    </Box>
-                    <Box sx={{ width: "100%" }}>
+                    </Card>
+                    <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography
                         sx={{
                           fontWeight: 700,
@@ -62,7 +72,7 @@ export const Support = () => {
                       >
                         Free & Open Source
                       </Typography>
-                      <Box sx={{ width: "81%" }}>
+                      <Box sx={{ width: "90%" }}>
                         <Typography
                           sx={{
                             fontWeight: 500,
@@ -78,18 +88,20 @@ export const Support = () => {
                       </Box>
                     </Box>
                   </Box>
-                  <Box sx={{ display: "flex" }}>
-                    <Box
+                  <Box sx={{ display: "flex", mt: 6 }}>
+                    <Card
+                      elevation={4}
                       sx={{
-                        height: "60px",
-                        width: "60px",
+                        p: 2,
+                        height: "30px",
+                        width: "40px",
                         bgcolor: "white",
                         textAlign: "center",
                       }}
                     >
                       <img style={{ textAlign: "center" }} src={sign1}></img>
-                    </Box>
-                    <Box sx={{ width: "100%" }}>
+                    </Card>
+                    <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography
                         sx={{
                           fontWeight: 700,
@@ -114,18 +126,20 @@ export const Support = () => {
                       </Box>
                     </Box>
                   </Box>
-                  <Box sx={{ display: "flex" }}>
-                    <Box
+                  <Box sx={{ display: "flex", mt: 6 }}>
+                    <Card
+                      elevation={4}
                       sx={{
-                        height: "60px",
-                        width: "60px",
+                        p: 2,
+                        height: "30px",
+                        width: "40px",
                         bgcolor: "white",
                         textAlign: "center",
                       }}
                     >
                       <img style={{ textAlign: "center" }} src={sign1}></img>
-                    </Box>
-                    <Box sx={{ width: "100%" }}>
+                    </Card>
+                    <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography
                         sx={{
                           fontWeight: 700,

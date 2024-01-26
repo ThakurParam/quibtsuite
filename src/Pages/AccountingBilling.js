@@ -14,7 +14,7 @@ import AddIcon from "@mui/icons-material/Add";
 export const AccountingBilling = () => {
   return (
     <>
-      <Box sx={{ bgcolor: "#FFD6D6" }}>
+      <Box sx={{ bgcolor: "#FFD6D6", pb: 12 }}>
         <Box
           sx={{
             textAlign: "center",
@@ -32,27 +32,35 @@ export const AccountingBilling = () => {
             Why choose dedicated modules for Your Business?
           </Typography>
           <Box sx={{ justifyItems: "center" }}>
-            {/* <Box sx={{ width: "32%" }}> */}
-            <Typography
-              sx={{
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "24px",
-                letterSpacing: "-0.1px",
-                color: "#5F6D7E",
-              }}
-            >
-              With qbitsuite, you can conveniently manage all your business
-              functions from a single location.
-            </Typography>
+            <Box sx={{ width: "32%", mx: "auto ", mt: 3 }}>
+              <Typography
+                sx={{
+                  fontWeight: 400,
+                  fontSize: "18px",
+                  lineHeight: "24px",
+                  letterSpacing: "-0.1px",
+                  color: "#5F6D7E",
+                }}
+              >
+                With qbitsuite, you can conveniently manage all your business
+                functions from a single location.
+              </Typography>
+            </Box>
           </Box>
-          {/* </Box> */}
         </Box>
-        <Container maxWidth="xl" sx={{ mt: 5 }}>
+        <Container maxWidth="xl" sx={{ mt: 15 }}>
           <Box>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+            <Grid container spacing={10}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <Box sx={{ width: "80%" }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
@@ -66,8 +74,17 @@ export const AccountingBilling = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
+                <Box sx={{ width: "80%" }}>
                   <Typography
                     sx={{
                       fontWeight: 400,
@@ -86,35 +103,45 @@ export const AccountingBilling = () => {
               </Grid>
             </Grid>
           </Box>
-          <Box>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+          <Box sx={{ mt: 10 }}>
+            <Grid container spacing={10}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000"
+              >
+                <Box sx={{ mt: 4 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "12px" }}>
-                        <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
-                          aria-controls="panel1-content"
-                          id="panel1-header"
-                        >
-                          <Typography
-                            sx={{
-                              fontWeight: 500,
-                              fontSize: "20.68px",
-                              lineHeight: "26.32px",
-                              color: "#170F49",
-                            }}
+                      <Box>
+                        <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                          <AccordionSummary
+                            expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                            aria-controls="panel1-content"
+                            id="panel1-header"
                           >
-                            Why is Webflow the best nocode tool?
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
-                        </AccordionDetails>
-                      </Accordion>
+                            <Typography
+                              sx={{
+                                fontWeight: 500,
+                                fontSize: "20.68px",
+                                lineHeight: "26.32px",
+                                color: "#170F49",
+                              }}
+                            >
+                              Why is Webflow the best nocode tool?
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse malesuada lacus ex, sit amet
+                            blandit leo lobortis eget.
+                          </AccordionDetails>
+                        </Accordion>
+                      </Box>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
                       <Accordion sx={{ p: 5, borderRadius: "12px" }}>
@@ -169,7 +196,7 @@ export const AccountingBilling = () => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} data-aos="zoom-out-left">
                 <Box>
                   <img src={dashboard}></img>
                 </Box>

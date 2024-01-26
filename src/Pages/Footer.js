@@ -18,7 +18,7 @@ export const Footer = () => {
       >
         <Container maxWidth="xl">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={5} lg={5}>
+            <Grid item xs={12} md={5} lg={5} data-aos="fade-right">
               <Box>
                 <img src={quibtsuite}></img>
                 <Box sx={{ width: "50%", mt: 2 }}>
@@ -29,7 +29,7 @@ export const Footer = () => {
                 </Box>
                 <Box sx={{ mt: 3 }}>
                   <Typography sx={{ color: "#A5ACBA" }}>
-                    All Rights Reserved
+                    All Rights Reserved to
                     <span
                       style={{
                         color: "#5ADA5F",
@@ -38,46 +38,61 @@ export const Footer = () => {
                       }}
                     >
                       {" "}
-                      toquantmhill.com
+                      quantmhill.com
                     </span>
                   </Typography>
                 </Box>
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={2.2} lg={2.2}>
+            <Grid item xs={12} md={2.2} lg={2.2} data-aos="zoom-in">
               <Typography>Company</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>About us</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Freebies</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Premium</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Blog</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>
+              <Typography sx={{ color: "#A5ACBA", pt: 2 }}>About us</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>Freebies</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>Premium</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>Blog</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
                 Affiliate Program
               </Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Get Coupan</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Get Coupan
+              </Typography>
             </Grid>
-            <Grid item xs={12} md={2.2} lg={2.2}>
+            <Grid item xs={12} md={2.2} lg={2.2} data-aos="zoom-in">
               <Typography>Help and Support</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>
+              <Typography sx={{ color: "#A5ACBA", pt: 2 }}>
                 Knowledge Center
               </Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Contact Us</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Premium Support</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Sponsorship</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Contact Us
+              </Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Premium Support
+              </Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Sponsorship
+              </Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
                 Custom Development
               </Typography>
             </Grid>
-            <Grid item xs={12} md={2.2} lg={2.2}>
+            <Grid item xs={12} md={2.2} lg={2.2} data-aos="fade-right">
               <Typography>Support</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>
+              <Typography sx={{ color: "#A5ACBA", pt: 2 }}>
                 Terms & Conditions
               </Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Privacy Policy</Typography>
-              <Typography sx={{ color: "#A5ACBA" }}>Liceneses</Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Privacy Policy
+              </Typography>
+              <Typography sx={{ color: "#A5ACBA", pt: 1 }}>
+                Liceneses
+              </Typography>
             </Grid>
           </Grid>
-          <Box sx={{ borderTop: "1px solid gray ", pt: 3 }}>
+          <Box
+            sx={{ borderTop: "1px solid gray ", pt: 3, mt: 9 }}
+            data-aos="zoom-out-right"
+          >
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div>
                 <Typography
@@ -91,22 +106,19 @@ export const Footer = () => {
                   © 2023 Lookscout. All Rights Reserved.
                 </Typography>
               </div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <div>
-                    <img src={fb}></img>
-                  </div>
-                  <div>
-                    <img src={google}></img>
-                  </div>
-                  <div>
-                    <img src={apple}></img>
-                  </div>
-                  <div>
-                    <img src={insta}></img>
-                  </div>
+
+              <div style={{ display: "flex", gap: "30px" }}>
+                <div>
+                  <img src={fb}></img>
+                </div>
+                <div>
+                  <img src={google}></img>
+                </div>
+                <div>
+                  <img src={apple}></img>
+                </div>
+                <div>
+                  <img src={insta}></img>
                 </div>
               </div>
             </div>

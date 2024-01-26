@@ -4,16 +4,20 @@ import logo from "../Assests/BarBox/Logo.png";
 import dashboard from "../Assests/quibtsuite.png";
 import vector from "../Assests/BarBox/Vector 32.png";
 import screen from "../Assests/BarBox/Screen.png";
+import play from "../Assests/BarBox/Play.svg";
 export const TopBar = () => {
   return (
     <>
-      <Box sx={{ bgcolor: "#FFFFFF" }}>
+      <Box sx={{ bgcolor: "#FFFFFF", pb: 12, pt: 2 }}>
         <Container maxWidth="xl">
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box
+            sx={{ display: "flex", justifyContent: "space-between" }}
+            data-aos="fade-right"
+          >
             <Box>
               <img src={dashboard}></img>
             </Box>
-            <Box sx={{ display: "flex", gap: "6px" }}>
+            <Box sx={{ display: "flex", gap: "20px", pt: 1 }}>
               <Button
                 sx={{
                   height: "22px",
@@ -23,18 +27,18 @@ export const TopBar = () => {
                   color: "black",
                 }}
               >
-                <Typography>Home</Typography>
+                <Typography sx={{ fontWeight: 600 }}>Home</Typography>
               </Button>
               <Button
                 sx={{
                   height: "22px",
-                  width: "44px",
+                  width: "auto",
                   borderRadius: "5px",
                   textTransform: "none",
                   color: "black",
                 }}
               >
-                <Typography>Add-On</Typography>
+                <Typography sx={{ fontWeight: 600 }}>Add-On</Typography>
               </Button>
               <Button
                 sx={{
@@ -46,21 +50,29 @@ export const TopBar = () => {
                   p: 1,
                 }}
               >
-                <Typography>Pricing</Typography>
+                <Typography sx={{ fontWeight: 600 }}>Pricing</Typography>
               </Button>
               <Button
                 sx={{
                   height: "22px",
-                  width: "44px",
+                  width: "auto",
                   borderRadius: "5px",
                   textTransform: "none",
                   color: "black",
                 }}
               >
-                <Typography>About Us</Typography>
+                <Typography
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    fontWeight: 600,
+                  }}
+                >
+                  About Us
+                </Typography>
               </Button>
             </Box>
-            <Box sx={{ display: "flex", gap: "6px" }}>
+            <Box sx={{ display: "flex", gap: "20px" }}>
               <Button
                 sx={{
                   height: "22px",
@@ -77,6 +89,7 @@ export const TopBar = () => {
                     fontSize: "15px",
                     lineHeight: "22px",
                     color: "#000000",
+                    mt: 3,
                   }}
                 >
                   Sign Up
@@ -106,10 +119,10 @@ export const TopBar = () => {
               </Button>
             </Box>
           </Box>
-          <Box>
+          <Box sx={{ mt: 10 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+              <Grid item xs={12} md={6} lg={6} data-aos="fade-up-right">
+                <Box sx={{ width: "75%" }}>
                   <Typography
                     sx={{
                       fontWeight: 700,
@@ -123,10 +136,10 @@ export const TopBar = () => {
                     business functions in.one place
                   </Typography>
                 </Box>
-                <Box>
+                <Box sx={{ mt: 7 }}>
                   <img src={vector}></img>
                 </Box>
-                <Box>
+                <Box sx={{ mt: 7, width: "70%" }}>
                   <Typography
                     sx={{
                       fontWeight: 400,
@@ -141,13 +154,13 @@ export const TopBar = () => {
                     an intuitive eCommerce.
                   </Typography>
                 </Box>
-                <Box>
+                <Box sx={{ mt: 7 }}>
                   <Button
                     sx={{
                       width: "Hug (165px)",
                       height: "Hug (62px)",
                       borderRadius: "40px",
-                      padding: "20px, 30px, 20px, 30px",
+                      padding: "20px",
                       gap: "10px",
                       bgcolor: "#54BD95",
                       textTransform: "none",
@@ -164,14 +177,27 @@ export const TopBar = () => {
                       Try free trial
                     </Typography>
                   </Button>
+                  <Button sx={{ ml: 4 }}>
+                    <img src={play}></img>
+                    <Typography
+                      sx={{
+                        textTransform: "none",
+                        color: "black",
+                        fontWeight: 500,
+                        ml: 2,
+                      }}
+                    >
+                      View Demo
+                    </Typography>
+                  </Button>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} data-aos="fade-up-left">
                 <img src={screen}></img>
               </Grid>
             </Grid>
           </Box>
-          <Box sx={{ mt: 8 }}>
+          <Box sx={{ mt: 14 }} data-aos="flip-left">
             <Typography
               sx={{
                 color: "#FFFFFF",
@@ -184,7 +210,7 @@ export const TopBar = () => {
             >
               More than 25,000 teams use Collabs
             </Typography>
-            <Box sx={{ textAlign: "center", mt: 5 }}>
+            <Box sx={{ textAlign: "center", mt: 7 }} data-aos="flip-right">
               <img src={logo}></img>
             </Box>
           </Box>

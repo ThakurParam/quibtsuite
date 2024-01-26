@@ -13,7 +13,7 @@ export const Footertop = () => {
       >
         <Container maxWidth="xl">
           <Grid container spacing={2} sx={{ pt: 10 }}>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
               <Box sx={{ width: "80%" }}>
                 <Typography
                   sx={{
@@ -42,7 +42,7 @@ export const Footertop = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
               <Box sx={{ width: "80%" }}>
                 <Typography
                   sx={{

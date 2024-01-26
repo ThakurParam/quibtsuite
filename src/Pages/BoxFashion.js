@@ -3,6 +3,7 @@ import React from "react";
 import php from "../Assests/BoxFashion-image/php-image.png";
 import base from "../Assests/BoxFashion-image/codebase-image.png";
 import integration from "../Assests/BoxFashion-image/integration-image.png";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export const BoxFashion = () => {
   return (
     <>
@@ -10,8 +11,8 @@ export const BoxFashion = () => {
         <Container maxWidth="xl">
           <Box sx={{ mt: 10 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+              <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
+                <Box sx={{ width: "80%" }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
@@ -24,8 +25,8 @@ export const BoxFashion = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
-                <Box>
+              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
+                <Box sx={{ width: "70%" }}>
                   <Typography
                     sx={{
                       fontWeight: 500,
@@ -44,12 +45,12 @@ export const BoxFashion = () => {
           </Box>
           <Box sx={{ mt: 10 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid item xs={12} md={4} lg={4} data-aos="fade-right">
                 <Box>
                   <Box>
                     <img src={php}></img>
                   </Box>
-                  <Box>
+                  <Box sx={{ mt: 4 }}>
                     <Typography
                       sx={{
                         fontWeight: 600,
@@ -61,42 +62,54 @@ export const BoxFashion = () => {
                     >
                       High-Performing, Secure PHP Framework
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontWeight: 400,
-                        fontSize: "17.25px",
-                        lineHeight: "21px",
-                        color: "#A6A6A6",
-                        letterSpacing: "-0.09 px",
-                      }}
-                    >
-                      Unlike many frameworks that come and go, the framework
-                      stood the test of time. Over the years, it grew to become
-                      one of the fastest and most secure frameworks in the
-                      market.
-                    </Typography>
-                    <Button>
+                    <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
                         sx={{
-                          color: "#5ADA5F",
-                          fontWeight: 700,
-                          fontSize: "12.34px",
-                          lineHeight: "37.01px",
-                          textAlign: "center",
+                          fontWeight: 400,
+                          fontSize: "17.25px",
+                          lineHeight: "21px",
+                          color: "#A6A6A6",
+                          letterSpacing: "-0.09 px",
                         }}
                       >
-                        Learn More
+                        Unlike many frameworks that come and go, the framework
+                        stood the test of time. Over the years, it grew to
+                        become one of the fastest and most secure frameworks in
+                        the market.
                       </Typography>
-                    </Button>
+                      <Button sx={{ textTransform: "none", mt: 1 }}>
+                        <Typography
+                          sx={{
+                            color: "#5ADA5F",
+                            fontWeight: 700,
+                            fontSize: "15px",
+                            lineHeight: "37.01px",
+                            textAlign: "center",
+                          }}
+                        >
+                          Learn More
+                        </Typography>
+                        <ArrowForwardIcon
+                          sx={{ color: "#5ADA5F", fontSize: "large" }}
+                        />
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                lg={4}
+                data-aos="fade-up"
+                data-aos-duration="3000"
+              >
                 <Box>
                   <Box>
                     <img src={base}></img>
                   </Box>
-                  <Box>
+                  <Box sx={{ mt: 4 }}>
                     <Typography
                       sx={{
                         fontWeight: 600,
@@ -108,42 +121,48 @@ export const BoxFashion = () => {
                     >
                       Stable Codebase
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontWeight: 400,
-                        fontSize: "17.25px",
-                        lineHeight: "21px",
-                        color: "#A6A6A6",
-                        letterSpacing: "-0.09 px",
-                      }}
-                    >
-                      Unlike many frameworks that come and go, the framework
-                      stood the test of time. Over the years, it grew to become
-                      one of the fastest and most secure frameworks in the
-                      market.
-                    </Typography>
-                    <Button>
+                    <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
                         sx={{
-                          color: "#5ADA5F",
-                          fontWeight: 700,
-                          fontSize: "12.34px",
-                          lineHeight: "37.01px",
-                          textAlign: "center",
+                          fontWeight: 400,
+                          fontSize: "17.25px",
+                          lineHeight: "21px",
+                          color: "#A6A6A6",
+                          letterSpacing: "-0.09 px",
                         }}
                       >
-                        Learn More
+                        Unlike many frameworks that come and go, the framework
+                        stood the test of time. Over the years, it grew to
+                        become one of the fastest and most secure frameworks in
+                        the market.
                       </Typography>
-                    </Button>
+                      <Button sx={{ mt: 1 }}>
+                        <Typography
+                          sx={{
+                            color: "#5ADA5F",
+                            fontWeight: 700,
+                            fontSize: "15px",
+                            lineHeight: "37.01px",
+                            textAlign: "center",
+                            textTransform: "none",
+                          }}
+                        >
+                          Learn More
+                        </Typography>
+                        <ArrowForwardIcon
+                          sx={{ color: "#5ADA5F", fontSize: "large" }}
+                        />
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={4} lg={4}>
+              <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
                 <Box>
                   <Box>
                     <img src={integration}></img>
                   </Box>
-                  <Box>
+                  <Box sx={{ mt: 4 }}>
                     <Typography
                       sx={{
                         fontWeight: 600,
@@ -155,33 +174,39 @@ export const BoxFashion = () => {
                     >
                       Secure Integrations
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontWeight: 400,
-                        fontSize: "17.25px",
-                        lineHeight: "21px",
-                        color: "#A6A6A6",
-                        letterSpacing: "-0.09 px",
-                      }}
-                    >
-                      Unlike many frameworks that come and go, the framework
-                      stood the test of time. Over the years, it grew to become
-                      one of the fastest and most secure frameworks in the
-                      market.
-                    </Typography>
-                    <Button>
+                    <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
                         sx={{
-                          color: "#5ADA5F",
-                          fontWeight: 700,
-                          fontSize: "12.34px",
-                          lineHeight: "37.01px",
-                          textAlign: "center",
+                          fontWeight: 400,
+                          fontSize: "17.25px",
+                          lineHeight: "21px",
+                          color: "#A6A6A6",
+                          letterSpacing: "-0.09 px",
                         }}
                       >
-                        Learn More
+                        Unlike many frameworks that come and go, the framework
+                        stood the test of time. Over the years, it grew to
+                        become one of the fastest and most secure frameworks in
+                        the market.
                       </Typography>
-                    </Button>
+                      <Button sx={{ mt: 1 }}>
+                        <Typography
+                          sx={{
+                            color: "#5ADA5F",
+                            fontWeight: 700,
+                            fontSize: "15px",
+                            lineHeight: "37.01px",
+                            textAlign: "center",
+                            textTransform: "none",
+                          }}
+                        >
+                          Learn More
+                        </Typography>
+                        <ArrowForwardIcon
+                          sx={{ color: "#5ADA5F", fontSize: "large" }}
+                        />
+                      </Button>
+                    </Box>
                   </Box>
                 </Box>
               </Grid>

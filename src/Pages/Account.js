@@ -1,26 +1,24 @@
-import { Dashboard } from "@mui/icons-material";
+import React from "react";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Box,
   Button,
-  Card,
   Container,
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
 
-export const Hrm = () => {
+export const Account = () => {
   return (
     <>
-      <Box sx={{ bgcolor: "#F9F8FE", pt: 7, pb: 10 }}>
-        <Container maxWidth="xl">
+      <Box sx={{ bgcolor: "#FFD6D6", pb: 12 }}>
+        <Container maxWidth="xl" sx={{ mt: 10 }}>
           <Box>
-            <Grid container spacing={12}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
                 <Box sx={{ width: "80%" }}>
                   <Typography
@@ -32,7 +30,7 @@ export const Hrm = () => {
                       color: "#272D37",
                     }}
                   >
-                    Everything You Need For a Successful HRM - In One Place
+                    Account Helps You Simplify Your Accounting and Billing
                   </Typography>
                 </Box>
               </Grid>
@@ -57,34 +55,36 @@ export const Hrm = () => {
             </Grid>
           </Box>
           <Box sx={{ mt: 10 }}>
-            <Grid container spacing={12}>
+            <Grid container spacing={10}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
-                <Box sx={{ mt: 5 }}>
+                <Box sx={{ mt: 4 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "20px" }}>
-                        <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
-                          aria-controls="panel1-content"
-                          id="panel1-header"
-                        >
-                          <Typography
-                            sx={{
-                              fontWeight: 500,
-                              fontSize: "20.68px",
-                              lineHeight: "26.32px",
-                              color: "#170F49",
-                            }}
+                      <Box>
+                        <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                          <AccordionSummary
+                            expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                            aria-controls="panel1-content"
+                            id="panel1-header"
                           >
-                            When did Webflow was founded?
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
-                        </AccordionDetails>
-                      </Accordion>
+                            <Typography
+                              sx={{
+                                fontWeight: 500,
+                                fontSize: "20.68px",
+                                lineHeight: "26.32px",
+                                color: "#170F49",
+                              }}
+                            >
+                              Why is Webflow the best nocode tool?
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Suspendisse malesuada lacus ex, sit amet
+                            blandit leo lobortis eget.
+                          </AccordionDetails>
+                        </Accordion>
+                      </Box>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
                       <Accordion sx={{ p: 5, borderRadius: "12px" }}>
@@ -101,7 +101,7 @@ export const Hrm = () => {
                               color: "#170F49",
                             }}
                           >
-                            Is NoCode the future of the web?
+                            When did Webflow was founded?
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails>

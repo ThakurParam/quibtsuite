@@ -4,12 +4,13 @@ import icon1 from "../Assests/buiittech/Icon1.png";
 import icon2 from "../Assests/buiittech/Icon2.png";
 import icon3 from "../Assests/buiittech/Icon3.png";
 import icon4 from "../Assests/buiittech/Icon4.png";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export const BuiltTech = () => {
   return (
     <>
       <Box sx={{ mt: 12 }}>
-        <Container maxWidth="xl">
+        <Container maxWidth="false">
           <Box
             sx={{
               bgcolor: "#E6F7EF",
@@ -29,7 +30,7 @@ export const BuiltTech = () => {
             >
               Built with Technology You Can Trust
             </Typography>
-            <Box sx={{}}>
+            <Box sx={{ width: "37%", mx: "auto", mt: 3 }}>
               <Typography
                 sx={{
                   fontWeight: 400,
@@ -51,8 +52,15 @@ export const BuiltTech = () => {
                 spacing={2}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
-                <Grid item xs={12} md={5} lg={5} sx={{ p: 1 }}>
-                  <Card sx={{ bgcolor: "white", borderRadius: "15.94px" }}>
+                <Grid
+                  item
+                  xs={12}
+                  md={5}
+                  lg={5}
+                  sx={{ p: 3 }}
+                  data-aos="fade-right"
+                >
+                  <Card sx={{ bgcolor: "white", borderRadius: "16px", p: 5 }}>
                     <Grid container spacing={2}>
                       <Grid item xs={3} md={3} lg={3}>
                         <img src={icon1}></img>
@@ -88,20 +96,26 @@ export const BuiltTech = () => {
                             sx={{
                               color: "#5ADA5F",
                               fontWeight: 500,
-                              fontSize: "12.75px",
+                              fontSize: "15px",
                               lineHeight: "19.13px",
                               textAlign: "center",
+                              textTransform: "none",
                             }}
                           >
                             Learn More
                           </Typography>
+                          <ArrowForwardIcon
+                            sx={{ color: "#5ADA5F", fontSize: "large" }}
+                          />
                         </Button>
                       </Grid>
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={5} lg={5}>
-                  <Card sx={{ bgcolor: "white", borderRadius: "15.94px" }}>
+                <Grid item xs={12} md={5} lg={5} data-aos="fade-left">
+                  <Card
+                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                  >
                     <Grid container spacing={2}>
                       <Grid item xs={3} md={3} lg={3}>
                         <img src={icon2}></img>
@@ -136,13 +150,17 @@ export const BuiltTech = () => {
                             sx={{
                               color: "#5ADA5F",
                               fontWeight: 500,
-                              fontSize: "12.75px",
+                              fontSize: "15px",
                               lineHeight: "19.13px",
                               textAlign: "center",
+                              textTransform: "none",
                             }}
                           >
                             Learn More
                           </Typography>
+                          <ArrowForwardIcon
+                            sx={{ color: "#5ADA5F", fontSize: "large" }}
+                          />
                         </Button>
                       </Grid>
                     </Grid>
@@ -154,8 +172,17 @@ export const BuiltTech = () => {
                 spacing={2}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
-                <Grid item xs={12} md={5} lg={5} sx={{ p: 1 }}>
-                  <Card sx={{ bgcolor: "white", borderRadius: "15.94px" }}>
+                <Grid
+                  item
+                  xs={12}
+                  md={5}
+                  lg={5}
+                  sx={{ p: 1 }}
+                  data-aos="fade-right"
+                >
+                  <Card
+                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                  >
                     <Grid container spacing={2}>
                       <Grid item xs={3} md={3} lg={3}>
                         <img src={icon3}></img>
@@ -190,20 +217,26 @@ export const BuiltTech = () => {
                             sx={{
                               color: "#5ADA5F",
                               fontWeight: 500,
-                              fontSize: "12.75px",
+                              fontSize: "15px",
                               lineHeight: "19.13px",
                               textAlign: "center",
+                              textTransform: "none",
                             }}
                           >
                             Learn More
                           </Typography>
+                          <ArrowForwardIcon
+                            sx={{ color: "#5ADA5F", fontSize: "large" }}
+                          />
                         </Button>
                       </Grid>
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={5} lg={5}>
-                  <Card sx={{ bgcolor: "white", borderRadius: "15.94px" }}>
+                <Grid item xs={12} md={5} lg={5} data-aos="fade-left">
+                  <Card
+                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                  >
                     <Grid container spacing={2}>
                       <Grid item xs={3} md={3} lg={3}>
                         <img src={icon4}></img>
@@ -238,13 +271,17 @@ export const BuiltTech = () => {
                             sx={{
                               color: "#5ADA5F",
                               fontWeight: 500,
-                              fontSize: "12.75px",
+                              fontSize: "15px",
                               lineHeight: "19.13px",
                               textAlign: "center",
+                              textTransform: "none",
                             }}
                           >
                             Learn More
                           </Typography>
+                          <ArrowForwardIcon
+                            sx={{ color: "#5ADA5F", fontSize: "large" }}
+                          />
                         </Button>
                       </Grid>
                     </Grid>

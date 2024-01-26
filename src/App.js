@@ -10,14 +10,22 @@ import { AccountingBilling } from "./Pages/AccountingBilling";
 import { Support } from "./Pages/Support";
 import { TopBar } from "./Pages/TopBar";
 import { Accordian } from "./Components/Accordian";
-
+import { Account } from "./Pages/Account";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       {/* <Accordian /> */}
       <TopBar />
       <Support />
       <AccountingBilling />
+      <Hrm />
+      <Account />
       <Hrm />
       <LaravelBackend />
       <BoxFashion />
