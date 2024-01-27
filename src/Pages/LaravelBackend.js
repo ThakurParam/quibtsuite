@@ -3,7 +3,7 @@ import React from "react";
 import screen from "../Assests/BarBox/device.png";
 import tab from "../Assests/BarBox/devicetab.png";
 import speaker from "../Assests/BarBox/topspeakercam.png";
-
+import laravel from "../Assests/laravel.png";
 export const LaravelBackend = () => {
   return (
     <>
@@ -101,10 +101,20 @@ export const LaravelBackend = () => {
                 </Typography>
               </Button>
             </Box>
-            <Box sx={{ mt: 4 }}>
-              <img src={screen}></img>
-              <img src={speaker}></img>
-              <img src={tab}></img>
+            <Box sx={{ mt: 6, position: "relative" }}>
+              <img src={screen} style={{ position: "relative" }}></img>
+              <img
+                src={speaker}
+                style={{ position: "absolute", top: "7px", left: 650 }}
+              ></img>
+              <img
+                src={tab}
+                style={{ position: "absolute", top: "20px", left: 230 }}
+              ></img>
+              <img
+                src={laravel}
+                style={{ position: "absolute", top: 50, left: 230 }}
+              ></img>
             </Box>
           </Box>
         </Container>

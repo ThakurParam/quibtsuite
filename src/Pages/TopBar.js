@@ -5,6 +5,8 @@ import dashboard from "../Assests/quibtsuite.png";
 import vector from "../Assests/BarBox/Vector 32.png";
 import screen from "../Assests/BarBox/Screen.png";
 import play from "../Assests/BarBox/Play.svg";
+import dashimage from "../Assests/dashboard2.png";
+import cam from "../Assests/iMac.png";
 export const TopBar = () => {
   return (
     <>
@@ -192,8 +194,31 @@ export const TopBar = () => {
                   </Button>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-up-left">
-                <img src={screen}></img>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                data-aos="fade-up-left"
+                sx={{ position: "relative" }}
+              >
+                <img
+                  src={screen}
+                  style={{ position: "relative", width: "auto" }}
+                ></img>
+                <img
+                  src={cam}
+                  style={{ position: "absolute", top: 22, left: 380 }}
+                ></img>
+                <img
+                  src={dashimage}
+                  style={{
+                    position: "absolute",
+                    top: 40,
+                    left: 35,
+                    width: "auto",
+                  }}
+                ></img>
               </Grid>
             </Grid>
           </Box>

@@ -7,11 +7,18 @@ import {
   Container,
   Grid,
   Typography,
+  useTheme,
 } from "@mui/material";
 import React from "react";
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
 export const AccountingBilling = () => {
+  const theme = useTheme();
+
+  const accordionStyle = {
+    borderRadius: "20px",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+  };
   return (
     <>
       <Box sx={{ bgcolor: "#FFD6D6", pb: 12 }}>
@@ -118,9 +125,22 @@ export const AccountingBilling = () => {
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={12} lg={12}>
                       <Box>
-                        <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                        <Accordion
+                          sx={{ p: 5, borderRadius: "12px" }}
+                          style={accordionStyle}
+                        >
                           <AccordionSummary
-                            expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                            expandIcon={
+                              <AddIcon
+                                sx={{
+                                  color: "#5ADA5F",
+
+                                  p: "10px",
+                                  bgcolor: "#f7f7ff",
+                                  borderRadius: "10px",
+                                }}
+                              />
+                            }
                             aria-controls="panel1-content"
                             id="panel1-header"
                           >
@@ -135,7 +155,14 @@ export const AccountingBilling = () => {
                               Why is Webflow the best nocode tool?
                             </Typography>
                           </AccordionSummary>
-                          <AccordionDetails>
+                          <AccordionDetails
+                            sx={{
+                              fontWeight: 400,
+                              fontSize: "16.92px",
+                              lineHeight: "28.2px",
+                              color: "#6F6C90",
+                            }}
+                          >
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Suspendisse malesuada lacus ex, sit amet
                             blandit leo lobortis eget.
@@ -144,9 +171,22 @@ export const AccountingBilling = () => {
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                      <Accordion
+                        sx={{ p: 5, borderRadius: "12px" }}
+                        style={accordionStyle}
+                      >
                         <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                          expandIcon={
+                            <AddIcon
+                              sx={{
+                                color: "#5ADA5F",
+
+                                p: "10px",
+                                bgcolor: "#f7f7ff",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          }
                           aria-controls="panel1-content"
                           id="panel1-header"
                         >
@@ -161,7 +201,14 @@ export const AccountingBilling = () => {
                             When did Webflow was founded?
                           </Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails
+                          sx={{
+                            fontWeight: 400,
+                            fontSize: "16.92px",
+                            lineHeight: "28.2px",
+                            color: "#6F6C90",
+                          }}
+                        >
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse malesuada lacus ex, sit amet blandit
                           leo lobortis eget.
@@ -169,9 +216,22 @@ export const AccountingBilling = () => {
                       </Accordion>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                      <Accordion
+                        sx={{ p: 5, borderRadius: "12px" }}
+                        style={accordionStyle}
+                      >
                         <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                          expandIcon={
+                            <AddIcon
+                              sx={{
+                                color: "#5ADA5F",
+
+                                p: "10px",
+                                bgcolor: "#f7f7ff",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          }
                           aria-controls="panel1-content"
                           id="panel1-header"
                         >
@@ -186,7 +246,14 @@ export const AccountingBilling = () => {
                             Is NoCode the future of the web?
                           </Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails
+                          sx={{
+                            fontWeight: 400,
+                            fontSize: "16.92px",
+                            lineHeight: "28.2px",
+                            color: "#6F6C90",
+                          }}
+                        >
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse malesuada lacus ex, sit amet blandit
                           leo lobortis eget.
@@ -198,7 +265,7 @@ export const AccountingBilling = () => {
               </Grid>
               <Grid item xs={12} md={6} lg={6} data-aos="zoom-out-left">
                 <Box>
-                  <img src={dashboard}></img>
+                  <img src={dashboard} style={{ width: "auto" }}></img>
                 </Box>
               </Grid>
             </Grid>

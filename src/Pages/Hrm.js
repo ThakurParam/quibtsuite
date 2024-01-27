@@ -9,12 +9,19 @@ import {
   Container,
   Grid,
   Typography,
+  useTheme,
 } from "@mui/material";
 import React from "react";
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
 
 export const Hrm = () => {
+  const theme = useTheme();
+
+  const accordionStyle = {
+    borderRadius: "20px",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+  };
   return (
     <>
       <Box sx={{ bgcolor: "#F9F8FE", pt: 7, pb: 10 }}>
@@ -62,9 +69,22 @@ export const Hrm = () => {
                 <Box sx={{ mt: 5 }}>
                   <Grid container spacing={2}>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "20px" }}>
+                      <Accordion
+                        sx={{ p: 5, borderRadius: "20px" }}
+                        style={accordionStyle}
+                      >
                         <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                          expandIcon={
+                            <AddIcon
+                              sx={{
+                                color: "#5ADA5F",
+
+                                p: "10px",
+                                bgcolor: "#f7f7ff",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          }
                           aria-controls="panel1-content"
                           id="panel1-header"
                         >
@@ -79,7 +99,14 @@ export const Hrm = () => {
                             When did Webflow was founded?
                           </Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails
+                          sx={{
+                            fontWeight: 400,
+                            fontSize: "16.92px",
+                            lineHeight: "28.2px",
+                            color: "#6F6C90",
+                          }}
+                        >
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse malesuada lacus ex, sit amet blandit
                           leo lobortis eget.
@@ -87,9 +114,22 @@ export const Hrm = () => {
                       </Accordion>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                      <Accordion
+                        sx={{ p: 5, borderRadius: "12px" }}
+                        style={accordionStyle}
+                      >
                         <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                          expandIcon={
+                            <AddIcon
+                              sx={{
+                                color: "#5ADA5F",
+
+                                p: "10px",
+                                bgcolor: "#f7f7ff",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          }
                           aria-controls="panel1-content"
                           id="panel1-header"
                         >
@@ -104,7 +144,14 @@ export const Hrm = () => {
                             Is NoCode the future of the web?
                           </Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails
+                          sx={{
+                            fontWeight: 400,
+                            fontSize: "16.92px",
+                            lineHeight: "28.2px",
+                            color: "#6F6C90",
+                          }}
+                        >
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse malesuada lacus ex, sit amet blandit
                           leo lobortis eget.
@@ -112,9 +159,22 @@ export const Hrm = () => {
                       </Accordion>
                     </Grid>
                     <Grid item xs={12} md={12} lg={12}>
-                      <Accordion sx={{ p: 5, borderRadius: "12px" }}>
+                      <Accordion
+                        sx={{ p: 5, borderRadius: "12px" }}
+                        style={accordionStyle}
+                      >
                         <AccordionSummary
-                          expandIcon={<AddIcon sx={{ color: "#5ADA5F" }} />}
+                          expandIcon={
+                            <AddIcon
+                              sx={{
+                                color: "#5ADA5F",
+
+                                p: "10px",
+                                bgcolor: "#f7f7ff",
+                                borderRadius: "10px",
+                              }}
+                            />
+                          }
                           aria-controls="panel1-content"
                           id="panel1-header"
                         >
@@ -129,7 +189,14 @@ export const Hrm = () => {
                             Is NoCode the future of the web?
                           </Typography>
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails
+                          sx={{
+                            fontWeight: 400,
+                            fontSize: "16.92px",
+                            lineHeight: "28.2px",
+                            color: "#6F6C90",
+                          }}
+                        >
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Suspendisse malesuada lacus ex, sit amet blandit
                           leo lobortis eget.
