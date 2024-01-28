@@ -208,7 +208,10 @@ export const Account = () => {
               </Grid>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
                 <Box>
-                  <img src={dashboard} style={{ width: "auto" }}></img>
+                  <img
+                    src={dashboard}
+                    style={{ width: "100%", height: "auto" }}
+                  ></img>
                 </Box>
               </Grid>
             </Grid>

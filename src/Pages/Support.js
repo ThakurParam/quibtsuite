@@ -137,7 +137,14 @@ export const Support = () => {
                         textAlign: "center",
                       }}
                     >
-                      <img style={{ textAlign: "center" }} src={sign1}></img>
+                      <img
+                        style={{
+                          textAlign: "center",
+                          width: "100%",
+                          height: "auto",
+                        }}
+                        src={sign1}
+                      ></img>
                     </Card>
                     <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography

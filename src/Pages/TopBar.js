@@ -139,7 +139,7 @@ export const TopBar = () => {
                   </Typography>
                 </Box>
                 <Box sx={{ mt: 7 }}>
-                  <img src={vector}></img>
+                  <img src={vector} style={{ width: "65%" }}></img>
                 </Box>
                 <Box sx={{ mt: 7, width: "70%" }}>
                   <Typography
@@ -244,7 +244,7 @@ export const TopBar = () => {
               More than 25,000 teams use Collabs
             </Typography>
             <Box sx={{ textAlign: "center", mt: 7 }} data-aos="flip-right">
-              <img src={logo}></img>
+              <img src={logo} style={{ width: "100%", height: "auto" }}></img>
             </Box>
           </Box>
         </Container>

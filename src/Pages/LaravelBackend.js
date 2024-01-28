@@ -108,15 +108,32 @@ export const LaravelBackend = () => {
               ></img>
               <img
                 src={speaker}
-                style={{ position: "absolute", top: "1.5%", left: "45%" }}
+                style={{
+                  position: "absolute",
+                  top: "1.5%",
+                  left: "45%",
+                  height: "auto",
+                }}
               ></img>
               <img
                 src={tab}
-                style={{ position: "absolute", top: "5%", left: " 15.5%" }}
+                style={{
+                  position: "absolute",
+                  top: "5%",
+                  left: " 16%",
+                  height: "auto",
+                  width: "68%",
+                }}
               ></img>
               <img
                 src={laravel}
-                style={{ position: "absolute", top: "11%", left: "15.5%" }}
+                style={{
+                  position: "absolute",
+                  top: "11%",
+                  left: "15.5%",
+                  height: "auto",
+                  width: "69%",
+                }}
               ></img>
             </Box>
           </Box>
