@@ -101,19 +101,22 @@ export const LaravelBackend = () => {
                 </Typography>
               </Button>
             </Box>
-            <Box sx={{ mt: 6, position: "relative" }}>
-              <img src={screen} style={{ position: "relative" }}></img>
+            <Box sx={{ mt: 9, position: "relative" }}>
+              <img
+                src={screen}
+                style={{ position: "relative", width: "72% ", height: "auto" }}
+              ></img>
               <img
                 src={speaker}
-                style={{ position: "absolute", top: "7px", left: 650 }}
+                style={{ position: "absolute", top: "1.5%", left: "45%" }}
               ></img>
               <img
                 src={tab}
-                style={{ position: "absolute", top: "20px", left: 230 }}
+                style={{ position: "absolute", top: "5%", left: " 15.5%" }}
               ></img>
               <img
                 src={laravel}
-                style={{ position: "absolute", top: 50, left: 230 }}
+                style={{ position: "absolute", top: "11%", left: "15.5%" }}
               ></img>
             </Box>
           </Box>

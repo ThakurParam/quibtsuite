@@ -49,23 +49,30 @@ export const BuiltTech = () => {
             <Box sx={{ p: 2 }}>
               <Grid
                 container
-                spacing={2}
+                spacing={4}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
                 <Grid
                   item
                   xs={12}
-                  md={5}
-                  lg={5}
+                  md={4}
+                  lg={4}
                   sx={{ p: 3 }}
                   data-aos="fade-right"
                 >
-                  <Card sx={{ bgcolor: "white", borderRadius: "16px", p: 5 }}>
-                    <Grid container spacing={2}>
-                      <Grid item xs={3} md={3} lg={3}>
+                  <Card
+                    sx={{
+                      bgcolor: "white",
+                      borderRadius: "15.94px",
+                      p: 3,
+                      pt: 4,
+                    }}
+                  >
+                    <Grid container spacing={8}>
+                      <Grid item xs={2} md={2} lg={2}>
                         <img src={icon1}></img>
                       </Grid>
-                      <Grid item xs={9} md={9} lg={9}>
+                      <Grid item xs={10} md={10} lg={10}>
                         <Typography
                           sx={{
                             fontWeight: 500,
@@ -76,51 +83,60 @@ export const BuiltTech = () => {
                         >
                           Sell More Than Your Competitors
                         </Typography>
-                        <Typography
-                          sx={{
-                            fontWeight: 400,
-                            fontSize: "12.75px",
-                            color: "#5F6D7E",
-                            lineHeight: "19.13px",
-                          }}
-                        >
-                          Your online store has one goal - to sell your
-                          products. Thanks to years of experience in the
-                          industry, we know the ins and outs of online sales.
-                          And we put that knowledge into every package that we
-                          offer. With the Style eCommerce package, you get a
-                          store that’s
-                        </Typography>
-                        <Button>
+                        <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
                             sx={{
-                              color: "#5ADA5F",
-                              fontWeight: 500,
-                              fontSize: "15px",
+                              fontWeight: 400,
+                              fontSize: "13px",
+                              color: "#5F6D7E",
                               lineHeight: "19.13px",
-                              textAlign: "center",
-                              textTransform: "none",
                             }}
                           >
-                            Learn More
+                            Your online store has one goal - to sell your
+                            products. Thanks to years of experience in the
+                            industry, we know the ins and outs of online sales.
+                            And we put that knowledge into every package that we
+                            offer. With the Style eCommerce package, you get a
+                            store that’s
                           </Typography>
-                          <ArrowForwardIcon
-                            sx={{ color: "#5ADA5F", fontSize: "large" }}
-                          />
-                        </Button>
+                        </Box>
+                        <Box sx={{ mt: 2 }}>
+                          <Button>
+                            <Typography
+                              sx={{
+                                color: "#5ADA5F",
+                                fontWeight: 500,
+                                fontSize: "15px",
+                                lineHeight: "19.13px",
+                                textAlign: "center",
+                                textTransform: "none",
+                              }}
+                            >
+                              Learn More
+                            </Typography>
+                            <ArrowForwardIcon
+                              sx={{ color: "#5ADA5F", fontSize: "large" }}
+                            />
+                          </Button>
+                        </Box>
                       </Grid>
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={5} lg={5} data-aos="fade-left">
+                <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
                   <Card
-                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                    sx={{
+                      bgcolor: "white",
+                      borderRadius: "15.94px",
+                      p: 3,
+                      pt: 4,
+                    }}
                   >
-                    <Grid container spacing={2}>
-                      <Grid item xs={3} md={3} lg={3}>
+                    <Grid container spacing={8}>
+                      <Grid item xs={2} md={2} lg={2}>
                         <img src={icon2}></img>
                       </Grid>
-                      <Grid item xs={9} md={9} lg={9}>
+                      <Grid item xs={10} md={10} lg={10}>
                         <Typography
                           sx={{
                             fontWeight: 500,
@@ -131,21 +147,23 @@ export const BuiltTech = () => {
                         >
                           Get a Headstart over Your Competitors
                         </Typography>
-                        <Typography
-                          sx={{
-                            fontWeight: 400,
-                            fontSize: "12.75px",
-                            color: "#5F6D7E",
-                            lineHeight: "19.13px",
-                          }}
-                        >
-                          In business, you have to act fast. By choosing our
-                          Style theme package, you can get everything you need
-                          to start selling right away. Hit the market with your
-                          product sooner, attract early sales, and build an
-                          audience from day one.
-                        </Typography>
-                        <Button>
+                        <Box sx={{ width: "90%", mt: 1 }}>
+                          <Typography
+                            sx={{
+                              fontWeight: 400,
+                              fontSize: "15px",
+                              color: "#5F6D7E",
+                              lineHeight: "20px",
+                            }}
+                          >
+                            In business, you have to act fast. By choosing our
+                            Style theme package, you can get everything you need
+                            to start selling right away. Hit the market with
+                            your product sooner, attract early sales, and build
+                            an audience from day one.
+                          </Typography>
+                        </Box>
+                        <Button sx={{ mt: 2 }}>
                           <Typography
                             sx={{
                               color: "#5ADA5F",
@@ -169,25 +187,30 @@ export const BuiltTech = () => {
               </Grid>
               <Grid
                 container
-                spacing={2}
-                sx={{ mt: 4, justifyContent: "center" }}
+                spacing={4}
+                sx={{ mt: 3, justifyContent: "center" }}
               >
                 <Grid
                   item
                   xs={12}
-                  md={5}
-                  lg={5}
-                  sx={{ p: 1 }}
+                  md={4}
+                  lg={4}
+                  sx={{ p: 0 }}
                   data-aos="fade-right"
                 >
                   <Card
-                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                    sx={{
+                      bgcolor: "white",
+                      borderRadius: "15.94px",
+                      p: 3,
+                      pt: 4,
+                    }}
                   >
-                    <Grid container spacing={2}>
-                      <Grid item xs={3} md={3} lg={3}>
+                    <Grid container spacing={8}>
+                      <Grid item xs={2} md={2} lg={2}>
                         <img src={icon3}></img>
                       </Grid>
-                      <Grid item xs={9} md={9} lg={9}>
+                      <Grid item xs={10} md={10} lg={10}>
                         <Typography
                           sx={{
                             fontWeight: 500,
@@ -198,50 +221,59 @@ export const BuiltTech = () => {
                         >
                           Front-end Avoid Design Mistakes
                         </Typography>
-                        <Typography
-                          sx={{
-                            fontWeight: 400,
-                            fontSize: "12.75px",
-                            color: "#5F6D7E",
-                            lineHeight: "19.13px",
-                          }}
-                        >
-                          When you get a ready-made package, you avoid common
-                          design mistakes that could cost your business a
-                          fortune. Not only that. Thanks to a higher conversion
-                          rate, you can achieve better ROI on your marketing
-                          expenses.
-                        </Typography>
-                        <Button>
+                        <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
                             sx={{
-                              color: "#5ADA5F",
-                              fontWeight: 500,
-                              fontSize: "15px",
+                              fontWeight: 400,
+                              fontSize: "13px",
+                              color: "#5F6D7E",
                               lineHeight: "19.13px",
-                              textAlign: "center",
-                              textTransform: "none",
                             }}
                           >
-                            Learn More
+                            When you get a ready-made package, you avoid common
+                            design mistakes that could cost your business a
+                            fortune. Not only that. Thanks to a higher
+                            conversion rate, you can achieve better ROI on your
+                            marketing expenses.
                           </Typography>
-                          <ArrowForwardIcon
-                            sx={{ color: "#5ADA5F", fontSize: "large" }}
-                          />
-                        </Button>
+                        </Box>
+                        <Box sx={{ mt: 2 }}>
+                          <Button>
+                            <Typography
+                              sx={{
+                                color: "#5ADA5F",
+                                fontWeight: 500,
+                                fontSize: "15px",
+                                lineHeight: "19.13px",
+                                textAlign: "center",
+                                textTransform: "none",
+                              }}
+                            >
+                              Learn More
+                            </Typography>
+                            <ArrowForwardIcon
+                              sx={{ color: "#5ADA5F", fontSize: "large" }}
+                            />
+                          </Button>
+                        </Box>
                       </Grid>
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={5} lg={5} data-aos="fade-left">
+                <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
                   <Card
-                    sx={{ bgcolor: "white", borderRadius: "15.94px", p: 5 }}
+                    sx={{
+                      bgcolor: "white",
+                      borderRadius: "15.94px",
+                      p: 3,
+                      pt: 4,
+                    }}
                   >
-                    <Grid container spacing={2}>
-                      <Grid item xs={3} md={3} lg={3}>
+                    <Grid container spacing={8}>
+                      <Grid item xs={2} md={2} lg={2}>
                         <img src={icon4}></img>
                       </Grid>
-                      <Grid item xs={9} md={9} lg={9}>
+                      <Grid item xs={10} md={10} lg={10}>
                         <Typography
                           sx={{
                             fontWeight: 500,
@@ -252,37 +284,41 @@ export const BuiltTech = () => {
                         >
                           Build a Long-Term Asset
                         </Typography>
-                        <Typography
-                          sx={{
-                            fontWeight: 400,
-                            fontSize: "12.75px",
-                            color: "#5F6D7E",
-                            lineHeight: "19.13px",
-                          }}
-                        >
-                          The key to success in eCommerce is to scale your store
-                          and build an audience of loyal, recurring customers.
-                          With our package, you get more than just a store. You
-                          get an asset that’s ready for you to take care of it
-                          and grow it for years to come.
-                        </Typography>
-                        <Button>
+                        <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
                             sx={{
-                              color: "#5ADA5F",
-                              fontWeight: 500,
-                              fontSize: "15px",
+                              fontWeight: 400,
+                              fontSize: "13px",
+                              color: "#5F6D7E",
                               lineHeight: "19.13px",
-                              textAlign: "center",
-                              textTransform: "none",
                             }}
                           >
-                            Learn More
+                            The key to success in eCommerce is to scale your
+                            store and build an audience of loyal, recurring
+                            customers. With our package, you get more than just
+                            a store. You get an asset that’s ready for you to
+                            take care of it and grow it for years to come.
                           </Typography>
-                          <ArrowForwardIcon
-                            sx={{ color: "#5ADA5F", fontSize: "large" }}
-                          />
-                        </Button>
+                        </Box>
+                        <Box sx={{ mt: 2 }}>
+                          <Button>
+                            <Typography
+                              sx={{
+                                color: "#5ADA5F",
+                                fontWeight: 500,
+                                fontSize: "15px",
+                                lineHeight: "19.13px",
+                                textAlign: "center",
+                                textTransform: "none",
+                              }}
+                            >
+                              Learn More
+                            </Typography>
+                            <ArrowForwardIcon
+                              sx={{ color: "#5ADA5F", fontSize: "large" }}
+                            />
+                          </Button>
+                        </Box>
                       </Grid>
                     </Grid>
                   </Card>

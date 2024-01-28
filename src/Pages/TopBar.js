@@ -204,19 +204,27 @@ export const TopBar = () => {
               >
                 <img
                   src={screen}
-                  style={{ position: "relative", width: "auto" }}
+                  style={{ position: "relative", width: "100%" }}
                 ></img>
                 <img
                   src={cam}
-                  style={{ position: "absolute", top: 22, left: 380 }}
+                  style={{
+                    position: "absolute",
+                    top: "4.5%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: "2%",
+                    height: "auto",
+                  }}
                 ></img>
                 <img
                   src={dashimage}
                   style={{
                     position: "absolute",
-                    top: 40,
-                    left: 35,
-                    width: "auto",
+                    top: "6.5%",
+                    left: "4.5%",
+                    width: "93%",
+                    height: "auto",
                   }}
                 ></img>
               </Grid>
