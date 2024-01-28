@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -12,8 +12,29 @@ import {
 } from "@mui/material";
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
-
+import RemoveIcon from "@mui/icons-material/Remove";
 export const Account = () => {
+  const [expandedAccordion1, setExpandedAccordion1] = useState(false);
+  const [expandedAccordion2, setExpandedAccordion2] = useState(false);
+  const [expandedAccordion3, setExpandedAccordion3] = useState(false);
+
+  const handleChangeAccordion1 = () => {
+    setExpandedAccordion1((prevExpanded) => !prevExpanded);
+    setExpandedAccordion2(false);
+    setExpandedAccordion3(false);
+  };
+
+  const handleChangeAccordion2 = () => {
+    setExpandedAccordion1(false);
+    setExpandedAccordion2((prevExpanded) => !prevExpanded);
+    setExpandedAccordion3(false);
+  };
+
+  const handleChangeAccordion3 = () => {
+    setExpandedAccordion1(false);
+    setExpandedAccordion2(false);
+    setExpandedAccordion3((prevExpanded) => !prevExpanded);
+  };
   const theme = useTheme();
 
   const accordionStyle = {
@@ -71,18 +92,30 @@ export const Account = () => {
                         <Accordion
                           sx={{ p: 5, borderRadius: "12px" }}
                           style={accordionStyle}
+                          expanded={expandedAccordion1}
+                          onChange={handleChangeAccordion1}
                         >
                           <AccordionSummary
                             expandIcon={
-                              <AddIcon
-                                sx={{
-                                  color: "#5ADA5F",
-
-                                  p: "10px",
-                                  bgcolor: "#f7f7ff",
-                                  borderRadius: "10px",
-                                }}
-                              />
+                              expandedAccordion1 ? (
+                                <RemoveIcon
+                                  sx={{
+                                    color: "black",
+                                    p: "10px",
+                                    bgcolor: "#5ADA5F",
+                                    borderRadius: "10px",
+                                  }}
+                                />
+                              ) : (
+                                <AddIcon
+                                  sx={{
+                                    color: "#5ADA5F",
+                                    p: "10px",
+                                    bgcolor: "#f7f7ff",
+                                    borderRadius: "10px",
+                                  }}
+                                />
+                              )
                             }
                             aria-controls="panel1-content"
                             id="panel1-header"
@@ -117,18 +150,30 @@ export const Account = () => {
                       <Accordion
                         sx={{ p: 5, borderRadius: "12px" }}
                         style={accordionStyle}
+                        expanded={expandedAccordion2}
+                        onChange={handleChangeAccordion2}
                       >
                         <AccordionSummary
                           expandIcon={
-                            <AddIcon
-                              sx={{
-                                color: "#5ADA5F",
-
-                                p: "10px",
-                                bgcolor: "#f7f7ff",
-                                borderRadius: "10px",
-                              }}
-                            />
+                            expandedAccordion2 ? (
+                              <RemoveIcon
+                                sx={{
+                                  color: "black",
+                                  p: "10px",
+                                  bgcolor: "#5ADA5F",
+                                  borderRadius: "10px",
+                                }}
+                              />
+                            ) : (
+                              <AddIcon
+                                sx={{
+                                  color: "#5ADA5F",
+                                  p: "10px",
+                                  bgcolor: "#f7f7ff",
+                                  borderRadius: "10px",
+                                }}
+                              />
+                            )
                           }
                           aria-controls="panel1-content"
                           id="panel1-header"
@@ -162,18 +207,30 @@ export const Account = () => {
                       <Accordion
                         sx={{ p: 5, borderRadius: "12px" }}
                         style={accordionStyle}
+                        expanded={expandedAccordion3}
+                        onChange={handleChangeAccordion3}
                       >
                         <AccordionSummary
                           expandIcon={
-                            <AddIcon
-                              sx={{
-                                color: "#5ADA5F",
-
-                                p: "10px",
-                                bgcolor: "#f7f7ff",
-                                borderRadius: "10px",
-                              }}
-                            />
+                            expandedAccordion3 ? (
+                              <RemoveIcon
+                                sx={{
+                                  color: "black",
+                                  p: "10px",
+                                  bgcolor: "#5ADA5F",
+                                  borderRadius: "10px",
+                                }}
+                              />
+                            ) : (
+                              <AddIcon
+                                sx={{
+                                  color: "#5ADA5F",
+                                  p: "10px",
+                                  bgcolor: "#f7f7ff",
+                                  borderRadius: "10px",
+                                }}
+                              />
+                            )
                           }
                           aria-controls="panel1-content"
                           id="panel1-header"

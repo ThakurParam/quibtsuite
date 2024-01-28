@@ -14,12 +14,15 @@ import { Account } from "./Pages/Account";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { SwiitchB } from "./Components/SwiitchB";
+
 function App() {
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <>
+      {/* <SwiitchB /> */}
       {/* <Accordian /> */}
       <TopBar />
       <Support />
