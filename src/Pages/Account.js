@@ -43,7 +43,12 @@ export const Account = () => {
   };
   return (
     <>
-      <Box sx={{ bgcolor: "#FFD6D6", pb: 12 }}>
+      <Box
+        sx={{
+          background: "linear-gradient(to right, #FFD6D6, #FFFFFF)",
+          pb: 12,
+        }}
+      >
         <Container maxWidth="xl" sx={{ mt: 10 }}>
           <Box>
             <Grid container spacing={10}>

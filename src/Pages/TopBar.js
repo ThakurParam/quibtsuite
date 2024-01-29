@@ -10,7 +10,13 @@ import cam from "../Assests/iMac.png";
 export const TopBar = () => {
   return (
     <>
-      <Box sx={{ bgcolor: "#FFFFFF", pb: 12, pt: 2 }}>
+      <Box
+        sx={{
+          background: `linear-gradient(to right,#52BDAA,#FFFFFF), linear-gradient(to bottom,#FFFFFF, #FFFFFF), linear-gradient(to bottom, #FFFFFF, #FFFFFF)`,
+          pb: 12,
+          pt: 2,
+        }}
+      >
         <Container maxWidth="xl">
           <Box
             sx={{ display: "flex", justifyContent: "space-between" }}

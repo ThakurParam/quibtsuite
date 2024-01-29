@@ -43,7 +43,12 @@ export const AccountingBilling = () => {
   };
   return (
     <>
-      <Box sx={{ bgcolor: "#FFD6D6", pb: 12 }}>
+      <Box
+        sx={{
+          background: "linear-gradient(to right, #FFD6D6, #FFFFFF)",
+          pb: 12,
+        }}
+      >
         <Box
           sx={{
             textAlign: "center",
@@ -209,7 +214,7 @@ export const AccountingBilling = () => {
                         sx={{ p: 5, borderRadius: "12px" }}
                         style={accordionStyle}
                         expanded={expandedAccordion2}
-              onChange={handleChangeAccordion2}
+                        onChange={handleChangeAccordion2}
                       >
                         <AccordionSummary
                           expandIcon={
