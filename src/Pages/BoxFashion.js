@@ -54,7 +54,10 @@ export const BoxFashion = () => {
               <Grid item xs={12} md={4} lg={4} data-aos="fade-right">
                 <Box>
                   <Box>
-                    <img src={php}></img>
+                    <img
+                      src={php}
+                      style={{ width: "80%", height: "auto" }}
+                    ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
                     <Typography
@@ -113,7 +116,10 @@ export const BoxFashion = () => {
               >
                 <Box>
                   <Box>
-                    <img src={base}></img>
+                    <img
+                      src={base}
+                      style={{ width: "85%", height: "auto" }}
+                    ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
                     <Typography
@@ -172,7 +178,10 @@ export const BoxFashion = () => {
               >
                 <Box>
                   <Box>
-                    <img src={integration}></img>
+                    <img
+                      src={integration}
+                      style={{ width: "85%", height: "auto" }}
+                    ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
                     <Typography
