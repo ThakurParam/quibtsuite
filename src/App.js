@@ -9,12 +9,11 @@ import { Hrm } from "./Pages/Hrm";
 import { AccountingBilling } from "./Pages/AccountingBilling";
 import { Support } from "./Pages/Support";
 import { TopBar } from "./Pages/TopBar";
-import { Accordian } from "./Components/Accordian";
+
 import { Account } from "./Pages/Account";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { SwiitchB } from "./Components/SwiitchB";
 
 function App() {
   useEffect(() => {
@@ -22,8 +21,6 @@ function App() {
   }, []);
   return (
     <>
-      {/* <SwiitchB /> */}
-      {/* <Accordian /> */}
       <TopBar />
       <Support />
       <AccountingBilling />

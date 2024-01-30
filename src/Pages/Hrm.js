@@ -50,7 +50,7 @@ export const Hrm = () => {
           <Box>
             <Grid container spacing={12}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
-                <Box sx={{ width: "80%" }}>
+                <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
@@ -64,8 +64,19 @@ export const Hrm = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
-                <Box sx={{ width: "80%" }}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                //  data-aos="fade-left"
+              >
+                <Box
+                  sx={{
+                    width: { lg: "80%", md: "80%", xs: "100%" },
+                    mt: { lg: 0, md: 0, xs: -7 },
+                  }}
+                >
                   <Typography
                     sx={{
                       fontWeight: 400,
@@ -263,7 +274,13 @@ export const Hrm = () => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                //  data-aos="fade-left"
+              >
                 <Box>
                   <img
                     src={dashboard}

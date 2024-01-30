@@ -66,7 +66,13 @@ export const AccountingBilling = () => {
             Why choose dedicated modules for Your Business?
           </Typography>
           <Box sx={{ justifyItems: "center" }}>
-            <Box sx={{ width: "32%", mx: "auto ", mt: 3 }}>
+            <Box
+              sx={{
+                width: { lg: "32%", md: "32%", xs: "100%" },
+                mx: "auto ",
+                mt: 3,
+              }}
+            >
               <Typography
                 sx={{
                   fontWeight: 400,
@@ -94,11 +100,11 @@ export const AccountingBilling = () => {
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
               >
-                <Box sx={{ width: "80%" }}>
+                <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
-                      fontSize: "32px",
+                      fontSize: { lg: "32px", md: "32px", xs: "28px" },
                       lineHeight: "42px",
                       letterSpacing: "-1%",
                       color: "#272D37",
@@ -113,12 +119,17 @@ export const AccountingBilling = () => {
                 xs={12}
                 md={6}
                 lg={6}
-                data-aos="fade-left"
-                data-aos-anchor="#example-anchor"
-                data-aos-offset="500"
-                data-aos-duration="500"
+                // data-aos="fade-left"
+                // data-aos-anchor="#example-anchor"
+                // data-aos-offset="500"
+                // data-aos-duration="500"
               >
-                <Box sx={{ width: "80%" }}>
+                <Box
+                  sx={{
+                    width: { lg: "80%", md: "80%", xs: "100%" },
+                    mt: { lg: 0, md: 0, xs: -7 },
+                  }}
+                >
                   <Typography
                     sx={{
                       fontWeight: 400,
@@ -144,9 +155,9 @@ export const AccountingBilling = () => {
                 xs={12}
                 md={6}
                 lg={6}
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
+                // data-aos="flip-left"
+                // data-aos-easing="ease-out-cubic"
+                // data-aos-duration="2000"
               >
                 <Box sx={{ mt: 4 }}>
                   <Grid container spacing={2}>
@@ -326,7 +337,13 @@ export const AccountingBilling = () => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="zoom-out-left">
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                // data-aos="zoom-out-left"
+              >
                 <Box>
                   <img
                     src={dashboard}

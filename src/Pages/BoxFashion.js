@@ -12,11 +12,11 @@ export const BoxFashion = () => {
           <Box sx={{ mt: 10 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
-                <Box sx={{ width: "80%" }}>
+                <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
-                      fontSize: "36px",
+                      fontSize: { lg: "36px", md: "36px", xs: "30px" },
                       lineHeight: "40px",
                       letterSpacing: "-2%",
                     }}
@@ -25,8 +25,14 @@ export const BoxFashion = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
-                <Box sx={{ width: "70%" }}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                // data-aos="fade-left"
+              >
+                <Box sx={{ width: { lg: "70%", md: "70%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 500,
@@ -157,7 +163,13 @@ export const BoxFashion = () => {
                   </Box>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
+              <Grid
+                item
+                xs={12}
+                md={4}
+                lg={4}
+                //  data-aos="fade-left"
+              >
                 <Box>
                   <Box>
                     <img src={integration}></img>

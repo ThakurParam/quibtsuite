@@ -22,7 +22,7 @@ export const Support = () => {
                     How we support our partner all over the world
                   </Typography>
                 </Box>
-                <Box sx={{ mt: 10, width: "100%" }}>
+                <Box sx={{ mt: { lg: 10, md: 10, xs: 4 }, width: "100%" }}>
                   <Typography
                     sx={{
                       fontWeight: 500,

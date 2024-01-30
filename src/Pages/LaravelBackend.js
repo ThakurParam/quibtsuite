@@ -18,11 +18,13 @@ export const LaravelBackend = () => {
               justifyContent: "center",
             }}
           >
-            <Box sx={{ width: "75%", mx: "auto" }}>
+            <Box
+              sx={{ width: { lg: "75%", md: "75%", xs: "100%" }, mx: "auto" }}
+            >
               <Typography
                 sx={{
                   fontWeight: 700,
-                  fontSize: "36px",
+                  fontSize: { lg: "36px", md: "36px", xs: "30px" },
                   lineHeight: "46.8px",
                   letterSpacing: "-2%",
                   textAlign: "center ",
@@ -37,7 +39,11 @@ export const LaravelBackend = () => {
               </Typography>
             </Box>
             <Box
-              sx={{ mx: "auto", width: "60%", mt: 3 }}
+              sx={{
+                mx: "auto",
+                width: { lg: "60%", md: "60%", xs: "100%" },
+                mt: 3,
+              }}
               data-aos="fade-right"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"

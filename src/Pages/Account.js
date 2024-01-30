@@ -53,11 +53,11 @@ export const Account = () => {
           <Box>
             <Grid container spacing={10}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
-                <Box sx={{ width: "80%" }}>
+                <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 600,
-                      fontSize: "32px",
+                      fontSize: { lg: "32px", md: "32px", xs: "28px" },
                       lineHeight: "42px",
                       letterSpacing: "-1%",
                       color: "#272D37",
@@ -67,8 +67,19 @@ export const Account = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
-                <Box sx={{ width: "80%" }}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                // data-aos="fade-left"
+              >
+                <Box
+                  sx={{
+                    width: { lg: "80%", md: "80%", xs: "100%" },
+                    mt: { lg: 0, md: 0, xs: -7 },
+                  }}
+                >
                   <Typography
                     sx={{
                       fontWeight: 400,
@@ -268,7 +279,13 @@ export const Account = () => {
                   </Grid>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={6}
+                //  data-aos="fade-left"
+              >
                 <Box>
                   <img
                     src={dashboard}

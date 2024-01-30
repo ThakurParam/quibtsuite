@@ -7,12 +7,13 @@ import screen from "../Assests/BarBox/Screen.png";
 import play from "../Assests/BarBox/Play.svg";
 import dashimage from "../Assests/dashboard2.png";
 import cam from "../Assests/iMac.png";
+import { Drawers } from "../Components/Drawers";
 export const TopBar = () => {
   return (
     <>
       <Box
         sx={{
-          background: `linear-gradient(to right,#52BDAA,#FFFFFF), linear-gradient(to bottom,#FFFFFF, #FFFFFF), linear-gradient(to bottom, #FFFFFF, #FFFFFF)`,
+          // background: `linear-gradient(to right,#52BDAA,#FFFFFF), linear-gradient(to bottom,#F9F8FE, #FFFFFF), linear-gradient(to bottom,#F9F8FE , #FFFFFF)`,
           pb: 12,
           pt: 2,
         }}
@@ -25,7 +26,13 @@ export const TopBar = () => {
             <Box>
               <img src={dashboard}></img>
             </Box>
-            <Box sx={{ display: "flex", gap: "20px", pt: 1 }}>
+            <Box
+              sx={{
+                display: { xs: "none", md: "flex", lg: "flex" },
+                gap: "20px",
+                pt: 1,
+              }}
+            >
               <Button
                 sx={{
                   height: "22px",
@@ -80,7 +87,12 @@ export const TopBar = () => {
                 </Typography>
               </Button>
             </Box>
-            <Box sx={{ display: "flex", gap: "20px" }}>
+            <Box
+              sx={{
+                display: { xs: "none", md: "flex", lg: "flex" },
+                gap: "20px",
+              }}
+            >
               <Button
                 sx={{
                   height: "22px",
@@ -126,15 +138,20 @@ export const TopBar = () => {
                 </Typography>
               </Button>
             </Box>
+            <Box
+              sx={{ display: { xs: "block", md: "none", lg: "none" }, mt: 1 }}
+            >
+              <Drawers />
+            </Box>
           </Box>
           <Box sx={{ mt: 10 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} md={6} lg={6} data-aos="fade-up-right">
-                <Box sx={{ width: "75%" }}>
+                <Box sx={{ width: { lg: "75%", md: "75%", xs: "100%" } }}>
                   <Typography
                     sx={{
                       fontWeight: 700,
-                      fontSize: " 48px",
+                      fontSize: { lg: " 48px", md: " 48px", xs: "40px" },
                       lineHeight: "60px",
                       letterSpacing: "-1%",
                       color: "#272D37",
@@ -205,7 +222,7 @@ export const TopBar = () => {
                 xs={12}
                 md={6}
                 lg={6}
-                data-aos="fade-up-left"
+                // data-aos="fade-up-left"
                 sx={{ position: "relative" }}
               >
                 <img

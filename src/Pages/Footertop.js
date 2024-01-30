@@ -1,7 +1,24 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
+import React, { useState } from "react";
 
 export const Footertop = () => {
+  const initialText = ` An effective fashion theme should be visually appealing and
+    easy to navigate. A good theme makes it easy for customers to
+    find and buy the items they’re interested in. The theme should
+    also be responsive so that it looks good on all devices.With
+    the Style theme, you get all of the above - and more. The
+    theme gives you everything you need to sell your products and
+    keep your audience coming back for more. Easily customize the
+    theme and adjust its design to your branding needs. Add
+    products, polish product pages, and start growing your online
+    business.`;
+
+  const [showFullText, setShowFullText] = useState(false);
+  const isSmallScreen = useMediaQuery("(min-width:600px)");
+
+  const handleReadMoreClick = () => {
+    setShowFullText(!showFullText);
+  };
   return (
     <>
       <Box
@@ -14,10 +31,10 @@ export const Footertop = () => {
         <Container maxWidth="xl">
           <Grid container spacing={2} sx={{ pt: 10 }}>
             <Grid item xs={12} md={6} lg={6} data-aos="fade-right">
-              <Box sx={{ width: "80%" }}>
+              <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                 <Typography
                   sx={{
-                    fontSize: "36px",
+                    fontSize: { lg: "36px", md: "36px", xs: "30px" },
                     //   fontFamily: "Inter",
                     fontWeight: 600,
                     color: "white",
@@ -27,7 +44,12 @@ export const Footertop = () => {
                   Package
                 </Typography>
               </Box>
-              <Box sx={{ width: "73%", mt: 7 }}>
+              <Box
+                sx={{
+                  width: { lg: "73%", md: "73%", xs: "100%" },
+                  mt: { lg: 7, md: 7, xs: 2 },
+                }}
+              >
                 <Typography
                   sx={{
                     fontSize: "16px",
@@ -42,8 +64,14 @@ export const Footertop = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={6} lg={6} data-aos="fade-left">
-              <Box sx={{ width: "80%" }}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={6}
+              //  data-aos="fade-left"
+            >
+              <Box sx={{ width: { lg: "80%", md: "80%", xs: "100%" } }}>
                 <Typography
                   sx={{
                     fontSize: "16px",
@@ -52,16 +80,37 @@ export const Footertop = () => {
                     color: "#A6A6A6",
                   }}
                 >
-                  An effective fashion theme should be visually appealing and
-                  easy to navigate. A good theme makes it easy for customers to
-                  find and buy the items they’re interested in. The theme should
-                  also be responsive so that it looks good on all devices.With
-                  the Style theme, you get all of the above - and more. The
-                  theme gives you everything you need to sell your products and
-                  keep your audience coming back for more. Easily customize the
-                  theme and adjust its design to your branding needs. Add
-                  products, polish product pages, and start growing your online
-                  business.
+                  {isSmallScreen || showFullText ? (
+                    <>
+                      {initialText}{" "}
+                      <span
+                        onClick={handleReadMoreClick}
+                        style={{
+                          color: "blue",
+                          cursor: "pointer",
+                          color: "white",
+                          fontSize: "12px",
+                        }}
+                      >
+                        Read Less...
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      {initialText.slice(0, 100)}{" "}
+                      <span
+                        onClick={handleReadMoreClick}
+                        style={{
+                          color: "blue",
+                          cursor: "pointer",
+                          color: "white",
+                          fontSize: "12px",
+                        }}
+                      >
+                        Read More...
+                      </span>
+                    </>
+                  )}
                 </Typography>
               </Box>
               <Box sx={{ mt: 3 }}>
@@ -93,7 +142,7 @@ export const Footertop = () => {
                   business work.
                 </Typography>
               </Box>
-              <Box sx={{ width: "75%", mt: 3 }}>
+              <Box sx={{ width: { lg: "75%", md: "75%", xs: "100%" }, mt: 3 }}>
                 <div style={{ display: "flex", width: "100%" }}>
                   <div style={{ width: "100%" }}>
                     <input
@@ -128,7 +177,7 @@ export const Footertop = () => {
                 </div>
               </Box>
             </Grid>
-          </Grid>{" "}
+          </Grid>
         </Container>
       </Box>
     </>

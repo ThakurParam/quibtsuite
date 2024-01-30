@@ -14,7 +14,7 @@ export const BuiltTech = () => {
           <Box
             sx={{
               bgcolor: "#E6F7EF",
-              p: 7,
+              p: { lg: 7, md: 7, xs: 2 },
               borderRadius: "22.24px",
             }}
           >
@@ -30,7 +30,13 @@ export const BuiltTech = () => {
             >
               Built with Technology You Can Trust
             </Typography>
-            <Box sx={{ width: "37%", mx: "auto", mt: 3 }}>
+            <Box
+              sx={{
+                width: { lg: "37%", md: "37%", xs: "100%" },
+                mx: "auto",
+                mt: 3,
+              }}
+            >
               <Typography
                 sx={{
                   fontWeight: 400,
@@ -46,25 +52,18 @@ export const BuiltTech = () => {
                 it - and how it benefits your business.
               </Typography>
             </Box>
-            <Box sx={{ p: 2 }}>
+            <Box sx={{ p: { lg: 2, md: 2, xs: 0 } }}>
               <Grid
                 container
                 spacing={4}
                 sx={{ mt: 4, justifyContent: "center" }}
               >
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  lg={4}
-                  sx={{ p: 3 }}
-                  data-aos="fade-right"
-                >
+                <Grid item xs={12} md={4} lg={4} data-aos="fade-right">
                   <Card
                     sx={{
                       bgcolor: "white",
                       borderRadius: "15.94px",
-                      p: 3,
+                      p: { lg: 3, md: 3, xs: 3 },
                       pt: 4,
                     }}
                   >
@@ -123,13 +122,19 @@ export const BuiltTech = () => {
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  lg={4}
+                  //  data-aos="fade-left"
+                >
                   <Card
                     sx={{
                       bgcolor: "white",
                       borderRadius: "15.94px",
                       p: 3,
-                      pt: 4,
+                      pt: 3,
                     }}
                   >
                     <Grid container spacing={8}>
@@ -147,11 +152,11 @@ export const BuiltTech = () => {
                         >
                           Get a Headstart over Your Competitors
                         </Typography>
-                        <Box sx={{ width: "90%", mt: 1 }}>
+                        <Box sx={{ width: "90%", mt: 1.5 }}>
                           <Typography
                             sx={{
                               fontWeight: 400,
-                              fontSize: "15px",
+                              fontSize: "13px",
                               color: "#5F6D7E",
                               lineHeight: "20px",
                             }}
@@ -163,7 +168,7 @@ export const BuiltTech = () => {
                             an audience from day one.
                           </Typography>
                         </Box>
-                        <Button sx={{ mt: 2 }}>
+                        <Button sx={{ mt: 1 }}>
                           <Typography
                             sx={{
                               color: "#5ADA5F",
@@ -260,7 +265,13 @@ export const BuiltTech = () => {
                     </Grid>
                   </Card>
                 </Grid>
-                <Grid item xs={12} md={4} lg={4} data-aos="fade-left">
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  lg={4}
+                  //  data-aos="fade-left"
+                >
                   <Card
                     sx={{
                       bgcolor: "white",
