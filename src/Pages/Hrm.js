@@ -11,11 +11,43 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import axios from "axios";
 export const Hrm = () => {
+  const [data, setData] = useState([]);
+  const [cord, setCord] = useState([]);
+
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-hrm2/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const accorddata = async () => {
+    try {
+      const res = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-hrm2-accordian/"
+      );
+      setCord(res.data);
+      console.log(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+    accorddata();
+  }, []);
+  console.log(data);
+  console.log(cord);
   const [expandedAccordion1, setExpandedAccordion1] = useState(false);
   const [expandedAccordion2, setExpandedAccordion2] = useState(false);
   const [expandedAccordion3, setExpandedAccordion3] = useState(false);
@@ -60,7 +92,7 @@ export const Hrm = () => {
                       color: "#272D37",
                     }}
                   >
-                    Everything You Need For a Successful HRM - In One Place
+                    {data?.hrm2Heading}{" "}
                   </Typography>
                 </Box>
               </Grid>
@@ -86,10 +118,7 @@ export const Hrm = () => {
                       color: "#5F6D7E",
                     }}
                   >
-                    This feature makes it easier for a company to maintain a
-                    record of an employee’s personal, company, and Bank details
-                    along with their essential documentation. Employees could
-                    view and manage their profiles.
+                    {data?.hrm2Subheading}
                   </Typography>
                 </Box>
               </Grid>
@@ -140,7 +169,7 @@ export const Hrm = () => {
                               color: "#170F49",
                             }}
                           >
-                            When did Webflow was founded?
+                            {cord?.accordian_2Heading}
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails
@@ -151,9 +180,7 @@ export const Hrm = () => {
                             color: "#6F6C90",
                           }}
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
+                          {cord?.accordian_2Paragraph}
                         </AccordionDetails>
                       </Accordion>
                     </Grid>
@@ -197,7 +224,7 @@ export const Hrm = () => {
                               color: "#170F49",
                             }}
                           >
-                            Is NoCode the future of the web?
+                            {cord?.accordian_2Heading}
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails
@@ -208,9 +235,7 @@ export const Hrm = () => {
                             color: "#6F6C90",
                           }}
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
+                          {cord?.accordian_2Paragraph}
                         </AccordionDetails>
                       </Accordion>
                     </Grid>
@@ -254,7 +279,7 @@ export const Hrm = () => {
                               color: "#170F49",
                             }}
                           >
-                            Is NoCode the future of the web?
+                            {cord?.accordian_2Heading}
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails
@@ -265,9 +290,7 @@ export const Hrm = () => {
                             color: "#6F6C90",
                           }}
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
+                          {cord?.accordian_2Paragraph}
                         </AccordionDetails>
                       </Accordion>
                     </Grid>
@@ -283,8 +306,12 @@ export const Hrm = () => {
               >
                 <Box>
                   <img
-                    src={dashboard}
-                    style={{ width: "100%", height: "auto" }}
+                    src={data?.hrm2Url}
+                    style={{
+                      width: "100%",
+                      height: "560px",
+                      borderRadius: "30px",
+                    }}
                   ></img>
                 </Box>
               </Grid>

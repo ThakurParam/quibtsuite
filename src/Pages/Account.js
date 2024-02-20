@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionDetails,
@@ -13,7 +13,38 @@ import {
 import dashboard from "../Assests/dashboard.png";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import axios from "axios";
 export const Account = () => {
+  const [data, setData] = useState([]);
+  const [cord, setCord] = useState([]);
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-account/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const accorddata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-accordian/"
+      );
+      setCord(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+    accorddata();
+  }, []);
+  console.log(data);
+  console.log(data);
   const [expandedAccordion1, setExpandedAccordion1] = useState(false);
   const [expandedAccordion2, setExpandedAccordion2] = useState(false);
   const [expandedAccordion3, setExpandedAccordion3] = useState(false);
@@ -63,7 +94,7 @@ export const Account = () => {
                       color: "#272D37",
                     }}
                   >
-                    Account Helps You Simplify Your Accounting and Billing
+                    {data?.accountHeading}{" "}
                   </Typography>
                 </Box>
               </Grid>
@@ -89,10 +120,7 @@ export const Account = () => {
                       color: "#5F6D7E",
                     }}
                   >
-                    This feature makes it easier for a company to maintain a
-                    record of an employee’s personal, company, and Bank details
-                    along with their essential documentation. Employees could
-                    view and manage their profiles.
+                    {data?.accountSubheading}
                   </Typography>
                 </Box>
               </Grid>
@@ -144,7 +172,7 @@ export const Account = () => {
                                 color: "#170F49",
                               }}
                             >
-                              Why is Webflow the best nocode tool?
+                              {cord?.accordianHeading}
                             </Typography>
                           </AccordionSummary>
                           <AccordionDetails
@@ -155,9 +183,7 @@ export const Account = () => {
                               color: "#6F6C90",
                             }}
                           >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Suspendisse malesuada lacus ex, sit amet
-                            blandit leo lobortis eget.
+                            {cord?.accordianParagraph}
                           </AccordionDetails>
                         </Accordion>
                       </Box>
@@ -202,7 +228,7 @@ export const Account = () => {
                               color: "#170F49",
                             }}
                           >
-                            When did Webflow was founded?
+                            {cord?.accordianHeading}{" "}
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails
@@ -213,9 +239,7 @@ export const Account = () => {
                             color: "#6F6C90",
                           }}
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
+                          {cord?.accordianParagraph}
                         </AccordionDetails>
                       </Accordion>
                     </Grid>
@@ -259,7 +283,7 @@ export const Account = () => {
                               color: "#170F49",
                             }}
                           >
-                            Is NoCode the future of the web?
+                            {cord?.accordianHeading}{" "}
                           </Typography>
                         </AccordionSummary>
                         <AccordionDetails
@@ -270,9 +294,7 @@ export const Account = () => {
                             color: "#6F6C90",
                           }}
                         >
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Suspendisse malesuada lacus ex, sit amet blandit
-                          leo lobortis eget.
+                          {cord?.accordianParagraph}
                         </AccordionDetails>
                       </Accordion>
                     </Grid>
@@ -288,8 +310,12 @@ export const Account = () => {
               >
                 <Box>
                   <img
-                    src={dashboard}
-                    style={{ width: "100%", height: "auto" }}
+                    src={data?.accountImageUrl}
+                    style={{
+                      width: "100%",
+                      height: "560px",
+                      borderRadius: "30px",
+                    }}
                   ></img>
                 </Box>
               </Grid>

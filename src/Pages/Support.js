@@ -1,9 +1,26 @@
 import { Box, Card, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import sign1 from "../Assests/support/sign1.png";
 import star1 from "../Assests/support/star1.png";
 import star2 from "../Assests/support/star2.png";
+import axios from "axios";
 export const Support = () => {
+  const [data, setData] = useState([]);
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-collab/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  console.log(data);
   return (
     <>
       <Box sx={{ bgcolor: "#F9F8FE", pt: 7, pb: 8 }}>
@@ -19,7 +36,7 @@ export const Support = () => {
                       lineHeight: "43.57px",
                     }}
                   >
-                    How we support our partner all over the world
+                    {data?.collabSubheading}{" "}
                   </Typography>
                 </Box>
                 <Box sx={{ mt: { lg: 10, md: 10, xs: 4 }, width: "100%" }}>
@@ -31,10 +48,7 @@ export const Support = () => {
                       color: "#A6A6A6",
                     }}
                   >
-                    SaaS become a common delivery model for many business
-                    application, including office software, messaging software,
-                    payroll processing software, DBMS software, management
-                    software
+                    {data?.collabParagraph}{" "}
                   </Typography>
                 </Box>
                 <Box sx={{ gap: 10, display: "flex", mt: 9 }}>
@@ -59,7 +73,10 @@ export const Support = () => {
                         textAlign: "center",
                       }}
                     >
-                      <img style={{ textAlign: "center" }} src={sign1}></img>
+                      <img
+                        style={{ textAlign: "center" }}
+                        src={data.checkPointUrl}
+                      ></img>
                     </Card>
                     <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography
@@ -70,7 +87,7 @@ export const Support = () => {
                           color: "#191A15",
                         }}
                       >
-                        Free & Open Source
+                        {data?.checkPointHeading}{" "}
                       </Typography>
                       <Box sx={{ width: "90%" }}>
                         <Typography
@@ -81,9 +98,7 @@ export const Support = () => {
                             color: "#A6A6A6",
                           }}
                         >
-                          Plan, collaborate, and publishing your contetn that
-                          drivees meaningful engagement and growth for your
-                          barnd
+                          {data?.checkPointParagraph}
                         </Typography>
                       </Box>
                     </Box>
@@ -99,7 +114,10 @@ export const Support = () => {
                         textAlign: "center",
                       }}
                     >
-                      <img style={{ textAlign: "center" }} src={sign1}></img>
+                      <img
+                        style={{ textAlign: "center" }}
+                        src={data.checkPointUrl}
+                      ></img>
                     </Card>
                     <Box sx={{ width: "100%", ml: 2 }}>
                       <Typography
@@ -110,7 +128,7 @@ export const Support = () => {
                           color: "#191A15",
                         }}
                       >
-                        Guaranteed to Grow Your Business
+                        {data?.checkPointHeading}
                       </Typography>
                       <Box sx={{ width: "85%" }}>
                         <Typography
@@ -121,7 +139,7 @@ export const Support = () => {
                             color: "#A6A6A6",
                           }}
                         >
-                          Analyze your performance and create goegeous report
+                          {data?.checkPointParagraph}{" "}
                         </Typography>
                       </Box>
                     </Box>
@@ -155,7 +173,7 @@ export const Support = () => {
                           color: "#191A15",
                         }}
                       >
-                        24/7 Support
+                        {data?.checkPointHeading}{" "}
                       </Typography>
                       <Box sx={{ width: "85%" }}>
                         <Typography
@@ -166,7 +184,7 @@ export const Support = () => {
                             color: "#A6A6A6",
                           }}
                         >
-                          Quickly navigate you anda engage with your adience
+                          {data?.checkPointParagraph}{" "}
                         </Typography>
                       </Box>
                     </Box>

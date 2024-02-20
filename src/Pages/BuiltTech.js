@@ -1,12 +1,43 @@
 import { Box, Button, Card, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import icon1 from "../Assests/buiittech/Icon1.png";
 import icon2 from "../Assests/buiittech/Icon2.png";
 import icon3 from "../Assests/buiittech/Icon3.png";
 import icon4 from "../Assests/buiittech/Icon4.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import axios from "axios";
 
 export const BuiltTech = () => {
+  const [data, setData] = useState([]);
+  const [cases, setCases] = useState([]);
+
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-builtech/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const casedata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-builtTechCards/"
+      );
+      setCases(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+    casedata();
+  }, []);
+  console.log(data);
   return (
     <>
       <Box sx={{ mt: 12 }}>
@@ -28,7 +59,7 @@ export const BuiltTech = () => {
                 textAlign: "center",
               }}
             >
-              Built with Technology You Can Trust
+              {data?.builtHeading}
             </Typography>
             <Box
               sx={{
@@ -47,9 +78,7 @@ export const BuiltTech = () => {
                   color: "#A6A6A6",
                 }}
               >
-                Our backend is built with Laravel - one of the most popular and
-                highest-rated web development frameworks. Find out why we chose
-                it - and how it benefits your business.
+                {data?.builtSubheading}
               </Typography>
             </Box>
             <Box sx={{ p: { lg: 2, md: 2, xs: 0 } }}>
@@ -69,7 +98,14 @@ export const BuiltTech = () => {
                   >
                     <Grid container spacing={8}>
                       <Grid item xs={2} md={2} lg={2}>
-                        <img src={icon1}></img>
+                        <img
+                          src={cases?.cardUrl}
+                          style={{
+                            height: "70px",
+                            width: "70px",
+                            borderRadius: "20px",
+                          }}
+                        ></img>
                       </Grid>
                       <Grid item xs={10} md={10} lg={10}>
                         <Typography
@@ -80,7 +116,7 @@ export const BuiltTech = () => {
                             lineHeight: "25.51px",
                           }}
                         >
-                          Sell More Than Your Competitors
+                          {cases?.cardheading}{" "}
                         </Typography>
                         <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
@@ -91,12 +127,7 @@ export const BuiltTech = () => {
                               lineHeight: "19.13px",
                             }}
                           >
-                            Your online store has one goal - to sell your
-                            products. Thanks to years of experience in the
-                            industry, we know the ins and outs of online sales.
-                            And we put that knowledge into every package that we
-                            offer. With the Style eCommerce package, you get a
-                            store that’s
+                            {cases?.cardParagraph}
                           </Typography>
                         </Box>
                         <Box sx={{ mt: 2 }}>
@@ -139,7 +170,14 @@ export const BuiltTech = () => {
                   >
                     <Grid container spacing={8}>
                       <Grid item xs={2} md={2} lg={2}>
-                        <img src={icon2}></img>
+                        <img
+                          src={cases?.cardUrl}
+                          style={{
+                            height: "70px",
+                            width: "70px",
+                            borderRadius: "20px",
+                          }}
+                        ></img>
                       </Grid>
                       <Grid item xs={10} md={10} lg={10}>
                         <Typography
@@ -150,7 +188,7 @@ export const BuiltTech = () => {
                             lineHeight: "25.51px",
                           }}
                         >
-                          Get a Headstart over Your Competitors
+                          {cases?.cardheading}{" "}
                         </Typography>
                         <Box sx={{ width: "90%", mt: 1.5 }}>
                           <Typography
@@ -161,11 +199,7 @@ export const BuiltTech = () => {
                               lineHeight: "20px",
                             }}
                           >
-                            In business, you have to act fast. By choosing our
-                            Style theme package, you can get everything you need
-                            to start selling right away. Hit the market with
-                            your product sooner, attract early sales, and build
-                            an audience from day one.
+                            {cases?.cardParagraph}
                           </Typography>
                         </Box>
                         <Button sx={{ mt: 1 }}>
@@ -213,7 +247,14 @@ export const BuiltTech = () => {
                   >
                     <Grid container spacing={8}>
                       <Grid item xs={2} md={2} lg={2}>
-                        <img src={icon3}></img>
+                        <img
+                          src={cases?.cardUrl}
+                          style={{
+                            height: "70px",
+                            width: "70px",
+                            borderRadius: "20px",
+                          }}
+                        ></img>
                       </Grid>
                       <Grid item xs={10} md={10} lg={10}>
                         <Typography
@@ -224,7 +265,7 @@ export const BuiltTech = () => {
                             lineHeight: "25.51px",
                           }}
                         >
-                          Front-end Avoid Design Mistakes
+                          {cases?.cardheading}{" "}
                         </Typography>
                         <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
@@ -235,11 +276,7 @@ export const BuiltTech = () => {
                               lineHeight: "19.13px",
                             }}
                           >
-                            When you get a ready-made package, you avoid common
-                            design mistakes that could cost your business a
-                            fortune. Not only that. Thanks to a higher
-                            conversion rate, you can achieve better ROI on your
-                            marketing expenses.
+                            {cases?.cardParagraph}
                           </Typography>
                         </Box>
                         <Box sx={{ mt: 2 }}>
@@ -282,7 +319,14 @@ export const BuiltTech = () => {
                   >
                     <Grid container spacing={8}>
                       <Grid item xs={2} md={2} lg={2}>
-                        <img src={icon4}></img>
+                        <img
+                          src={cases?.cardUrl}
+                          style={{
+                            height: "70px",
+                            width: "70px",
+                            borderRadius: "20px",
+                          }}
+                        ></img>
                       </Grid>
                       <Grid item xs={10} md={10} lg={10}>
                         <Typography
@@ -293,7 +337,7 @@ export const BuiltTech = () => {
                             lineHeight: "25.51px",
                           }}
                         >
-                          Build a Long-Term Asset
+                          {cases?.cardheading}{" "}
                         </Typography>
                         <Box sx={{ width: "98%", mt: 1 }}>
                           <Typography
@@ -304,11 +348,7 @@ export const BuiltTech = () => {
                               lineHeight: "19.13px",
                             }}
                           >
-                            The key to success in eCommerce is to scale your
-                            store and build an audience of loyal, recurring
-                            customers. With our package, you get more than just
-                            a store. You get an asset that’s ready for you to
-                            take care of it and grow it for years to come.
+                            {cases?.cardParagraph}
                           </Typography>
                         </Box>
                         <Box sx={{ mt: 2 }}>

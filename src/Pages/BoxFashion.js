@@ -1,10 +1,41 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import php from "../Assests/BoxFashion-image/php-image.png";
 import base from "../Assests/BoxFashion-image/codebase-image.png";
 import integration from "../Assests/BoxFashion-image/integration-image.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import axios from "axios";
 export const BoxFashion = () => {
+  const [data, setData] = useState([]);
+  const [cases, setCases] = useState([]);
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-fashionBox/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const casedata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-fashionBox-cases/"
+      );
+      setCases(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchdata();
+    casedata();
+  }, []);
+  console.log(data);
   return (
     <>
       <Box>
@@ -21,7 +52,7 @@ export const BoxFashion = () => {
                       letterSpacing: "-2%",
                     }}
                   >
-                    Why Choose a Dedicated Fashion Theme for Your Business?
+                    {data?.fashionBoxHeading}{" "}
                   </Typography>
                 </Box>
               </Grid>
@@ -41,9 +72,7 @@ export const BoxFashion = () => {
                       color: "#A6A6A6",
                     }}
                   >
-                    We offer a variety of interesting features that you can help
-                    increase yor productivity at work and manage your projrct
-                    esaly
+                    {data?.fashionBoxSubheading}
                   </Typography>
                 </Box>
               </Grid>
@@ -55,8 +84,12 @@ export const BoxFashion = () => {
                 <Box>
                   <Box>
                     <img
-                      src={php}
-                      style={{ width: "80%", height: "auto" }}
+                      src={cases?.fashionBoxUrl}
+                      style={{
+                        width: "80%",
+                        height: "350px",
+                        borderRadius: "25px",
+                      }}
                     ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
@@ -69,7 +102,7 @@ export const BoxFashion = () => {
                         letterSpacing: "-1%",
                       }}
                     >
-                      High-Performing, Secure PHP Framework
+                      {cases?.heading}
                     </Typography>
                     <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
@@ -81,10 +114,7 @@ export const BoxFashion = () => {
                           letterSpacing: "-0.09 px",
                         }}
                       >
-                        Unlike many frameworks that come and go, the framework
-                        stood the test of time. Over the years, it grew to
-                        become one of the fastest and most secure frameworks in
-                        the market.
+                        {cases?.paragraph}
                       </Typography>
                       <Button sx={{ textTransform: "none", mt: 1 }}>
                         <Typography
@@ -117,8 +147,12 @@ export const BoxFashion = () => {
                 <Box>
                   <Box>
                     <img
-                      src={base}
-                      style={{ width: "85%", height: "auto" }}
+                      src={cases?.fashionBoxUrl}
+                      style={{
+                        width: "80%",
+                        height: "350px",
+                        borderRadius: "25px",
+                      }}
                     ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
@@ -131,7 +165,7 @@ export const BoxFashion = () => {
                         letterSpacing: "-1%",
                       }}
                     >
-                      Stable Codebase
+                      {cases?.heading}
                     </Typography>
                     <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
@@ -143,10 +177,7 @@ export const BoxFashion = () => {
                           letterSpacing: "-0.09 px",
                         }}
                       >
-                        Unlike many frameworks that come and go, the framework
-                        stood the test of time. Over the years, it grew to
-                        become one of the fastest and most secure frameworks in
-                        the market.
+                        {cases?.paragraph}
                       </Typography>
                       <Button sx={{ mt: 1 }}>
                         <Typography
@@ -179,8 +210,12 @@ export const BoxFashion = () => {
                 <Box>
                   <Box>
                     <img
-                      src={integration}
-                      style={{ width: "85%", height: "auto" }}
+                      src={cases?.fashionBoxUrl}
+                      style={{
+                        width: "80%",
+                        height: "350px",
+                        borderRadius: "25px",
+                      }}
                     ></img>
                   </Box>
                   <Box sx={{ mt: 4 }}>
@@ -193,7 +228,7 @@ export const BoxFashion = () => {
                         letterSpacing: "-1%",
                       }}
                     >
-                      Secure Integrations
+                      {cases?.heading}
                     </Typography>
                     <Box sx={{ width: "80%", mt: 2 }}>
                       <Typography
@@ -205,10 +240,7 @@ export const BoxFashion = () => {
                           letterSpacing: "-0.09 px",
                         }}
                       >
-                        Unlike many frameworks that come and go, the framework
-                        stood the test of time. Over the years, it grew to
-                        become one of the fastest and most secure frameworks in
-                        the market.
+                        {cases?.paragraph}
                       </Typography>
                       <Button sx={{ mt: 1 }}>
                         <Typography

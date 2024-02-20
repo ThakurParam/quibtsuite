@@ -1,10 +1,27 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import screen from "../Assests/BarBox/device.png";
 import tab from "../Assests/BarBox/devicetab.png";
 import speaker from "../Assests/BarBox/topspeakercam.png";
 import laravel from "../Assests/laravel.png";
+import axios from "axios";
 export const LaravelBackend = () => {
+  const [data, setData] = useState([]);
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-laravel/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  console.log(data);
   return (
     <>
       <Box sx={{ pt: 9 }}>
@@ -34,8 +51,7 @@ export const LaravelBackend = () => {
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
               >
-                A style theme, together with a dedicated Laravel backend and an
-                intuitive mobile app
+                {data?.laravelHeading}
               </Typography>
             </Box>
             <Box
@@ -58,9 +74,7 @@ export const LaravelBackend = () => {
                   color: "#191A15",
                 }}
               >
-                POS allows you to create and maintain the data of each customer
-                and vendor. You get access to all essential information through
-                a well-maintained format.
+                {data?.laravelSubheading}
               </Typography>
             </Box>
             <Box sx={{ mt: 4 }}>
@@ -132,13 +146,14 @@ export const LaravelBackend = () => {
                 }}
               ></img>
               <img
-                src={laravel}
+                src={data?.laravelUrl}
                 style={{
                   position: "absolute",
                   top: "11%",
                   left: "15.5%",
-                  height: "auto",
+                  height: "450px",
                   width: "69%",
+                  borderRadius: "30px",
                 }}
               ></img>
             </Box>

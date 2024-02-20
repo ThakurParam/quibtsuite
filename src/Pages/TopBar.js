@@ -1,5 +1,5 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Assests/BarBox/Logo.png";
 import dashboard from "../Assests/quibtsuite.png";
 import vector from "../Assests/BarBox/Vector 32.png";
@@ -8,7 +8,24 @@ import play from "../Assests/BarBox/Play.svg";
 import dashimage from "../Assests/dashboard2.png";
 import cam from "../Assests/iMac.png";
 import { Drawers } from "../Components/Drawers";
+import axios from "axios";
 export const TopBar = () => {
+  const [data, setData] = useState([]);
+  const fetchdata = async () => {
+    try {
+      const response = await axios.get(
+        "https://qbitsuit-trainee.onrender.com/get-banner/"
+      );
+      setData(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  console.log(data);
   return (
     <>
       <Box
@@ -157,8 +174,7 @@ export const TopBar = () => {
                       color: "#272D37",
                     }}
                   >
-                    With Qbit Suite, you can take care of each need of your
-                    business functions in.one place
+                    {data?.bannerHeading}
                   </Typography>
                 </Box>
                 <Box sx={{ mt: 7 }}>
@@ -174,9 +190,7 @@ export const TopBar = () => {
                       color: "#5F6D7E",
                     }}
                   >
-                    Lay a solid foundation for your brand. Grab a
-                    high-converting web powered by a secure backend coupled with
-                    an intuitive eCommerce.
+                    {data?.bannerParagraph}
                   </Typography>
                 </Box>
                 <Box sx={{ mt: 7 }}>
@@ -241,13 +255,14 @@ export const TopBar = () => {
                   }}
                 ></img>
                 <img
-                  src={dashimage}
+                  src={data?.imageUrls}
                   style={{
                     position: "absolute",
-                    top: "6.5%",
-                    left: "4.5%",
+                    top: "6.%",
+                    left: "4.7%",
                     width: "93%",
-                    height: "auto",
+                    height: "520px",
+                    borderRadius: "20px",
                   }}
                 ></img>
               </Grid>
